@@ -1,3 +1,5 @@
 module.exports = {
-  lintOnSave: false
+  lintOnSave: false,
+  assetsDir: 'static',
+  publicPath: process.env.VUE_APP_CLIENT_URL || '/'
 }

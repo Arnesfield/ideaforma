@@ -1,0 +1,8 @@
+#!/bin/bash
+cd ./dist
+git init
+git remote add origin https://github.com/ideaforma-dev/ideaforma.git
+git add .
+git checkout -b gh-pages
+git commit -m "update"
+git push -uf origin gh-pages
