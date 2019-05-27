@@ -69,6 +69,7 @@ module.exports = {
         }
       }
     ],
+    'vue/multiline-html-element-content-newline': 'off',
     'vue/mustache-interpolation-spacing': ['error', 'always'],
     'vue/name-property-casing': ['error', 'kebab-case'],
     'vue/singleline-html-element-content-newline': 'off'
