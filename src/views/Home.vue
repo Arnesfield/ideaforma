@@ -1,14 +1,14 @@
 <template>
-  <hello-world/>
+  <featured-projects/>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+import FeaturedProjects from '@/components/core/FeaturedProjects'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    FeaturedProjects
   }
 }
 </script>
