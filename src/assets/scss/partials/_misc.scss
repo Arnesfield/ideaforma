@@ -1,0 +1,9 @@
+// width and height
+$wh: 32 64;
+
+@each $i in $wh {
+  .wh-#{$i} {
+    width: #{$i}px !important;
+    height: #{$i}px !important;
+  }
+}

@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import HrLine from '@/components/HrLine'
+import HrLine from '@/components/utils/HrLine'
 
 export default {
   name: 'section-layout',
@@ -36,12 +36,12 @@ export default {
     containerProps: {
       type: Object,
       required: false,
-      default: () => ({})
+      default: null
     },
     hrLineProps: {
       type: Object,
       required: false,
-      default: () => ({})
+      default: null
     }
   }
 }

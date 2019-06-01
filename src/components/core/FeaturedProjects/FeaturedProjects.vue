@@ -5,7 +5,12 @@
     :hr-line-props="{ width: '62vw' }"
   >
     <v-container>
-      <!-- TODO: add slider here -->
+      <carousel :items="featuredProjects">
+        <div slot-scope="{ item, index }">
+          <!-- TODO: update content -->
+          {{ index }}
+        </div>
+      </carousel>
 
       <!-- button below -->
       <v-layout>
@@ -25,12 +30,19 @@
 </template>
 
 <script>
+import { featuredProjects } from '@/data'
+import Carousel from '@/components/utils/Carousel'
 import SectionLayout from '@/layouts/SectionLayout'
 
 export default {
   name: 'featured-projects',
   components: {
+    Carousel,
     SectionLayout
-  }
+  },
+
+  data: () => ({
+    featuredProjects
+  })
 }
 </script>
