@@ -19,7 +19,7 @@
             <v-img
               style="width: 30%"
               class="mx-auto"
-              src="static/img/icon-gold-i.png"
+              :src="`${imgPath}icon-gold-i.png`"
             />
           </v-flex>
 
@@ -43,9 +43,7 @@
             md4
             hidden-sm-and-down
           >
-            <v-img
-              src="static/img/icon-gold-i.png"
-            />
+            <v-img :src="`${imgPath}icon-gold-i.png`"/>
           </v-flex>
 
           <v-flex
@@ -71,6 +69,7 @@
 
 <script>
 import { ourProcess } from '@/data'
+import { imgPath } from '@/utils/path'
 import ProcessItem from './components/ProcessItem'
 import SectionLayout from '@/layouts/SectionLayout'
 
@@ -86,6 +85,8 @@ export default {
   }),
 
   computed: {
+    imgPath: () => imgPath,
+
     // first 3
     leftItems() {
       return this.items.slice(0, 3)
