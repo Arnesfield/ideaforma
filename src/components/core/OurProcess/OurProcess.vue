@@ -12,6 +12,7 @@
           row
           wrap
           align-center
+          justify-center
         >
           <v-flex
             xs12
@@ -19,8 +20,8 @@
             hidden-md-and-up
           >
             <v-img
-              style="width: 30%"
               class="mx-auto"
+              style="width: 30%"
               :src="`${imgPath}icon-gold-i.png`"
             />
           </v-flex>
@@ -36,7 +37,8 @@
             >
               <process-item
                 v-show="TR"
-                v-bind="item"
+                class="mx-auto"
+                v-bind="{ ...processItemProps, ...item }"
                 :class="{
                   [`speed-${3 - i}`]: true,
                   'mr-5': isItemCenter(i, leftItems.length),
@@ -71,7 +73,8 @@
               <process-item
                 :key="i"
                 v-show="TR"
-                v-bind="item"
+                class="mx-auto"
+                v-bind="{ ...processItemProps, ...item }"
                 :class="{
                   [`speed-${i + 1}`]: true,
                   'ml-5': isItemCenter(i, rightItems.length),
@@ -119,9 +122,17 @@ export default {
       return this.items.slice(3)
     },
 
+    // ui
+    processItemProps() {
+      return { width: this.smallOnly ? 420 : undefined }
+    },
+
     // ux
     small() {
       return this.$vuetify.breakpoint.smAndDown
+    },
+    smallOnly() {
+      return this.$vuetify.breakpoint.smOnly
     }
   },
 

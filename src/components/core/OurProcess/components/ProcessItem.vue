@@ -2,6 +2,7 @@
   <v-card
     color="transparent"
     class="elevation-0"
+    v-bind="{ width }"
   >
     <v-card-title
       :class="titleClass"
@@ -47,6 +48,11 @@ export default {
     text: {
       type: String,
       required: true
+    },
+    width: {
+      type: [Number, String],
+      required: false,
+      default: undefined
     },
     titlePos: {
       type: String,
