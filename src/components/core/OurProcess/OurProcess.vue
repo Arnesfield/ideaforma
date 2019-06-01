@@ -55,7 +55,7 @@
             <v-bottom-sheet-transition>
               <v-img
                 v-show="TR"
-                class="speed-3"
+                class="speed-2"
                 :src="`${imgPath}icon-gold-i.png`"
               />
             </v-bottom-sheet-transition>
