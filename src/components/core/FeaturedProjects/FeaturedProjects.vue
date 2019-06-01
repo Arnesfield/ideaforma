@@ -2,6 +2,7 @@
   <section-layout
     class="bg-quite-grey"
     title="Featured Projects"
+    :title-animate="animate"
     :hr-line-props="{ right: true, width: '64vw' }"
   >
     <v-container>
@@ -30,12 +31,14 @@
 </template>
 
 <script>
+import { animatable } from '@/mixins'
 import { featuredProjects } from '@/data'
 import Carousel from '@/components/utils/Carousel'
 import SectionLayout from '@/layouts/SectionLayout'
 
 export default {
   name: 'featured-projects',
+  mixins: [animatable],
   components: {
     Carousel,
     SectionLayout

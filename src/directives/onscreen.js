@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 // TODO: still disregards x or width of el
-const isInViewport = function(el, offset) {
+const isInViewport = function(el, offset = 0) {
   const rect = el.getBoundingClientRect()
   // const clientWidth = window.innerWidth || document.documentElement.clientWidth
   const clientHeight = window.innerHeight || document.documentElement.clientHeight

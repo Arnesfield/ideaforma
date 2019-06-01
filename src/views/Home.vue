@@ -1,8 +1,14 @@
 <template>
   <div class="y-full">
-    <featured-projects/>
+    <featured-projects
+      :animate="TR[0]"
+      v-onscreen:0="onScreen"
+    />
     <!-- TODO: add image separator here -->
-    <our-process v-onscreen:1.300="onScreen"/>
+    <our-process
+      :animate="TR[1]"
+      v-onscreen:1.140="onScreen"
+    />
   </div>
 </template>
 
@@ -19,8 +25,8 @@ export default {
 
   data: () => ({
     TR: {
-      1: false,
-      2: false
+      0: false,
+      1: false
     }
   }),
 
