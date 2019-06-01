@@ -1,0 +1,9 @@
+// speed
+$duration: 0.25 0.5 1;
+
+@each $d in $duration {
+  $i: index($duration, $d);
+  .speed-#{$i} {
+    transition-duration: #{$d}s !important;
+  }
+}
