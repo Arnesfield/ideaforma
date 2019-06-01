@@ -1,8 +1,7 @@
 <template>
   <v-container
     fluid
-    fill-height
-    class="pa-0 y-full"
+    class="pa-0"
     v-bind="containerProps"
   >
     <v-layout column>
@@ -13,7 +12,9 @@
         />
       </div>
 
-      <hr-line v-bind="hrLineProps"/>
+      <div>
+        <hr-line v-bind="hrLineProps"/>
+      </div>
 
       <slot/>
     </v-layout>

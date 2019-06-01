@@ -2,7 +2,7 @@
   <section-layout
     class="bg-quite-grey"
     title="Featured Projects"
-    :hr-line-props="{ width: '62vw' }"
+    :hr-line-props="{ right: true, width: '62vw' }"
   >
     <v-container>
       <carousel :items="featuredProjects">

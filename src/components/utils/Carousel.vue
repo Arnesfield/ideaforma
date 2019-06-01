@@ -1,51 +1,48 @@
 <template>
-  <div>
-    <v-container
-      class="pa-0 y-full"
+  <v-container
+    class="pa-0 y-full"
+  >
+    <v-layout
+      row
+      align-center
+      class="y-full"
     >
-      <v-layout
-        row
-        align-center
-        class="y-full"
+      <v-btn
+        v-bind="btnProps"
+        @click="value++"
       >
-        <v-btn
-          v-bind="btnProps"
-          @click="value++"
-        >
-          <v-icon :size="controlSize">chevron_left</v-icon>
-        </v-btn>
+        <v-icon :size="controlSize">chevron_left</v-icon>
+      </v-btn>
 
-        <!-- window start -->
+      <!-- window start -->
 
-        <v-window
-          class="x-full -b"
-          v-model="value"
+      <v-window
+        class="x-full -b"
+        v-model="value"
+        :style="{ height }"
+      >
+        <v-window-item
+          :key="i"
+          :value="i"
           :style="{ height }"
+          v-bind="item.props"
+          v-for="(item, i) in items"
         >
-          <v-window-item
-            :key="i"
-            :value="i"
-            :style="{ height }"
-            v-bind="item.props"
-            v-for="(item, i) in items"
-          >
-            <slot v-bind="{ item, index: i }"/>
-          </v-window-item>
-        </v-window>
+          <slot v-bind="{ item, index: i }"/>
+        </v-window-item>
+      </v-window>
 
-        <!-- window end -->
+      <!-- window end -->
 
-        <v-btn
-          v-bind="btnProps"
-          @click="value++"
-        >
-          <v-icon :size="controlSize">chevron_right</v-icon>
-        </v-btn>
+      <v-btn
+        v-bind="btnProps"
+        @click="value++"
+      >
+        <v-icon :size="controlSize">chevron_right</v-icon>
+      </v-btn>
 
-      </v-layout>
-    </v-container>
-    
-  </div>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
