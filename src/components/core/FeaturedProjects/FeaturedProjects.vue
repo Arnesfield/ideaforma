@@ -2,10 +2,10 @@
   <section-layout
     class="bg-quite-grey"
     title="Featured Projects"
-    :hr-line-props="{ right: true, width: '62vw' }"
+    :hr-line-props="{ right: true, width: '64vw' }"
   >
     <v-container>
-      <carousel :items="featuredProjects">
+      <carousel v-bind="{ items }">
         <div slot-scope="{ item, index }">
           <!-- TODO: update content -->
           {{ index }}
@@ -42,7 +42,7 @@ export default {
   },
 
   data: () => ({
-    featuredProjects
+    items: featuredProjects
   })
 }
 </script>

@@ -8,7 +8,7 @@
       <div class="pa-3">
         <h1
           v-text="title"
-          class="mt-5 display-2 primary--text text-xs-center"
+          class="mt-5 display-3 primary--text text-xs-center"
         />
       </div>
 

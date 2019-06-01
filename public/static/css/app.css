@@ -1,3 +1,7 @@
+.mono {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
 .x-full {
   width: 100% !important;
 }

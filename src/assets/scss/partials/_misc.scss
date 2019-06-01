@@ -1,5 +1,5 @@
 // width and height
-$wh: 32 64;
+$wh: 32 64 128;
 
 @each $i in $wh {
   .wh-#{$i} {
