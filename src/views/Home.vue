@@ -20,7 +20,7 @@ export default {
   data: () => ({
     TR: {
       1: false,
-      2: false,
+      2: false
     }
   }),
 

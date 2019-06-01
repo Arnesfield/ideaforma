@@ -7,15 +7,15 @@ const isInViewport = function(el, offset) {
   const clientHeight = window.innerHeight || document.documentElement.clientHeight
 
   const res = rect.top + offset - clientHeight <= 0 && rect.bottom >= 0
-    // (rect.left >= 0 || rect.right <= clientWidth) &&
-    // (rect.top >= 0 || rect.bottom >= clientHeight)
+  // (rect.left >= 0 || rect.right <= clientWidth) &&
+  // (rect.top >= 0 || rect.bottom >= clientHeight)
 
   // console.warn(res)
   return res
 }
 
 Vue.directive('onscreen', {
-  bind(el, binding, vnode) {
+  bind(el, binding) {
     // if value is falsy, don't do anything
     if (!binding.value) {
       return
