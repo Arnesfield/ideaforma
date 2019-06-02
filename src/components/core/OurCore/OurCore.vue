@@ -29,13 +29,7 @@
               'mt-5': !small && (i == 0 || i == team.length - 1)
             }"
           >
-
-            <!-- FIXME: separate this into component -->
-            <user-info
-              :name="user.name"
-              :description="user.description"
-              :src="user.src"
-            />
+            <team-user-info v-bind="user"/>
           </v-flex>
         </v-layout>
 
@@ -66,13 +60,13 @@
 
 <script>
 import { team } from '@/data'
-import UserInfo from './UserInfo'
+import TeamUserInfo from './components/TeamUserInfo'
 import SectionLayout from '@/layouts/SectionLayout'
 
 export default {
-  name: 'core',
+  name: 'our-core',
   components: {
-    UserInfo,
+    TeamUserInfo,
     SectionLayout
   },
 

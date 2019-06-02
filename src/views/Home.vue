@@ -4,7 +4,7 @@
     <!-- TODO: add image separator here -->
     <our-process/>
     <Achievements/>
-    <Core/>
+    <our-core/>
     <Footer/>
   </div>
 </template>
@@ -13,7 +13,7 @@
 import OurProcess from '@/components/core/OurProcess'
 import FeaturedProjects from '@/components/core/FeaturedProjects'
 import Achievements from '@/components/core/Achievements/Achievements'
-import Core from '@/components/core/OurCore/Core'
+import OurCore from '@/components/core/OurCore'
 import Footer from '@/components/core/Footer/Footer'
 
 
@@ -23,7 +23,7 @@ export default {
     OurProcess,
     FeaturedProjects,
     Achievements,
-    Core,
+    OurCore,
     Footer
   }
 }

@@ -8,9 +8,9 @@
     </v-card-title>
     <v-card-text class="pt-3">
       <div
-        class="title text-uppercase"
-        style="color: #C0872C"
-      >{{ name }}</div>
+        v-text="name"
+        class="title text-uppercase primary--text"
+      />
       <div
         class="body-2 pt-3"
         v-text="description"
@@ -23,7 +23,7 @@
 import { teamPath } from '@/utils/path'
 
 export default {
-  name: 'user-info',
+  name: 'team-user-info',
   props: {
     name: {
       type: String,
