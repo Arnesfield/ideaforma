@@ -11,8 +11,8 @@
 
 <script>
 import OurCore from '@/components/core/OurCore'
+import AppFooter from '@/components/core/AppFooter'
 import OurProcess from '@/components/core/OurProcess'
-import AppFooter from '@/components/core/Footer/AppFooter'
 import FeaturedProjects from '@/components/core/FeaturedProjects'
 import Achievements from '@/components/core/Achievements/Achievements'
 
