@@ -11,7 +11,7 @@ export default [
   {
     number: 2,
     title: 'Design Pitch',
-    text: "We show you our heart and ideas. We present a visual tool to help and feel the mood as if you're already in the finished room.",
+    text: "We show you our heart and ideas. We present a visual tool to help set and feel the mood, as if you're already in the finished room!",
     // props
     titlePos: 'right',
     titleClass: 'text-xs-center text-sm-left text-md-right',
@@ -20,7 +20,7 @@ export default [
   {
     number: 3,
     title: 'Working Together',
-    text: 'After acceptance of our design pitch, we get into the nooks and cranies. We complete detailed into design drawings and specification of materials.',
+    text: 'After acceptance of our design pitch, we get into all of the nooks and cranies. We complete detailed interior design drawings and specification of materials.',
     // props
     titlePos: 'right',
     titleClass: 'text-xs-center text-sm-left text-md-right',
@@ -47,7 +47,7 @@ export default [
   {
     number: 6,
     title: 'Turnover &amp; See you soon',
-    text: "Once we've materialize your dream and vision, it's time for us to temporarily part ways. It's time for you to enjoy your own space. Don't worry. You can come visit us and ask for help anytime.",
+    text: "Once we've materialized your dream and vision, it's time for us to temporarily part ways; it's time for you to enjoy your own space. Don't worry. You can come visit us and ask for help anytime.",
     // props
     titlePos: 'left',
     titleClass: 'text-xs-center text-sm-left text-md-left',

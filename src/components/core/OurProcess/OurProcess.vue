@@ -21,7 +21,7 @@
               style="width: 30%"
               class="mx-auto speed-2 a-from-bottom"
               v-animate.100="{ above: true }"
-              :src="`${imgPath}icon-gold-i.png`"
+              :src="`${logoPath}icon-gold-i.png`"
             />
           </v-flex>
 
@@ -51,7 +51,7 @@
             <v-img
               class="speed-2 a-from-bottom"
               v-animate.100="{ above: true }"
-              :src="`${imgPath}icon-gold-i.png`"
+              :src="`${logoPath}icon-gold-i.png`"
             />
           </v-flex>
 
@@ -81,7 +81,7 @@
 
 <script>
 import { ourProcess } from '@/data'
-import { imgPath } from '@/utils/path'
+import { logoPath } from '@/utils/path'
 import ProcessItem from './components/ProcessItem'
 import SectionLayout from '@/layouts/SectionLayout'
 
@@ -97,7 +97,7 @@ export default {
   }),
 
   computed: {
-    imgPath: () => imgPath,
+    logoPath: () => logoPath,
 
     // first 3
     leftItems() {
