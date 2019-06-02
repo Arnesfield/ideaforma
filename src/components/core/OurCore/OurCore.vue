@@ -9,7 +9,7 @@
       <v-container
         grid-list-lg
         class="speed-3 a-from-bottom"
-        v-animate.100="{ above: true }"
+        v-animate.60="{ above: true }"
       >
         <v-layout
           row
@@ -22,12 +22,8 @@
             md4
             :key="i"
             v-for="(user, i) in team"
-            v-animate.140="{ above: true }"
-            class="pt-4 white--text a-from-bottom"
-            :class="{
-              [`speed-${i + 2}`]: true,
-              'mt-5': !small && (i == 0 || i == team.length - 1)
-            }"
+            class="pt-4 white--text"
+            :class="{ 'mt-5': !small && (i == 0 || i == team.length - 1) }"
           >
             <team-user-info v-bind="user"/>
           </v-flex>

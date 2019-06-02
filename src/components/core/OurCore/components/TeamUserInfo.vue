@@ -4,9 +4,17 @@
       primary
       class="title justify-center"
     >
-      <v-img :src="`${teamPath}${src}`"/>
+      <v-img
+        :src="`${teamPath}${src}`"
+        class="speed-3 a-from-bottom"
+        v-animate.40="{ above: true }"
+      />
     </v-card-title>
-    <v-card-text class="pt-3">
+
+    <v-card-text
+      v-animate="{ above: true }"
+      class="pt-3 speed-3 a-from-bottom"
+    >
       <div
         v-text="name"
         class="title text-uppercase primary--text"
