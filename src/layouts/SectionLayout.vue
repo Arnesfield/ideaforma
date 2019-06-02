@@ -4,6 +4,8 @@
     class="pa-0 relative"
     v-bind="containerProps"
   >
+    <slot name="outside"/>
+
     <v-layout column>
       <div class="pa-3">
         <h1
@@ -28,8 +30,6 @@
 
       <slot/>
     </v-layout>
-
-    <slot name="outside"/>
   </v-container>
 </template>
 
