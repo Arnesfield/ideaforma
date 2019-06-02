@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <link rel="icon" href="<%= BASE_URL %>static/img/logo/favicon.png">
+<link rel="icon" href="<%= BASE_URL %>static/img/logo/favicon.png">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
-    
-    <link rel="stylesheet" href="<%= BASE_URL %>static/css/app.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
 
-    <title>ideaforma</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but ideaforma doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<link rel="stylesheet" href="<%= BASE_URL %>static/css/app.css">
+
+<title>ideaforma</title>
+
+<style>
+.static-primary--text {
+  color: #b58837;
+}
+</style>
+
+</head>
+<body>
+
+<noscript>
+  <strong>We're sorry but ideaforma doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+
+<div id="preloader" style="height: 100%; display: none; justify-content: center; align-items: center; background-color: rgb(252, 252, 252);">
+  <div role="progressbar" aria-valuemin="0" aria-valuemax="100" class="v-progress-circular v-progress-circular--indeterminate static-primary--text" style="height: 32px; width: 32px;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="22.857142857142858 22.857142857142858 45.714285714285715 45.714285714285715" style="transform: rotate(0deg);">
+      <circle fill="transparent" cx="45.714285714285715" cy="45.714285714285715" r="20" stroke-width="5.714285714285714" stroke-dasharray="125.664" stroke-dashoffset="125.66370614359172px" class="v-progress-circular__overlay"></circle>
+    </svg>
+    <div class="v-progress-circular__info"></div>
+  </div>
+</div>
+
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
 </html>
