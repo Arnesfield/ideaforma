@@ -37,7 +37,7 @@
               v-animate.40="{ above: true }"
               v-for="(item, i) in leftItems"
               :class="{
-                [`speed-${i + 1}`]: true,
+                [`speed-${i + 2}`]: true,
                 'mr-5': isItemCenter(i, leftItems.length),
                 'ml-5': isItemCenter(i, leftItems.length, true)
               }"

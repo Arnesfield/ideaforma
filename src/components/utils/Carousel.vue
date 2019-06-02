@@ -11,7 +11,7 @@
         v-bind="btnProps"
         @click="value++"
       >
-        <v-icon :size="controlSize">chevron_left</v-icon>
+        <v-icon :size="mControlSize">chevron_left</v-icon>
       </v-btn>
 
       <!-- window start -->
@@ -38,7 +38,7 @@
         v-bind="btnProps"
         @click="value++"
       >
-        <v-icon :size="controlSize">chevron_right</v-icon>
+        <v-icon :size="mControlSize">chevron_right</v-icon>
       </v-btn>
 
     </v-layout>
@@ -71,12 +71,20 @@ export default {
   }),
 
   computed: {
+    small() {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+
+    mControlSize() {
+      return this.small ? 32 : this.controlSize
+    },
+
     btnProps() {
       return {
         flat: true,
         icon: true,
         color: 'primary',
-        class: `wh-${this.controlSize}`
+        class: `wh-${this.mControlSize}`
       }
     }
   }

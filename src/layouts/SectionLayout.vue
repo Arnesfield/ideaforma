@@ -9,7 +9,12 @@
         <h1
           v-text="title"
           v-animate.140="{ above: true }"
-          class="mt-5 display-3 primary--text text-xs-center speed-2 a-from-bottom"
+          class="mt-5 primary--text text-xs-center speed-2 a-from-bottom"
+          :class="{
+            'display-1': $vuetify.breakpoint.xsOnly,
+            'display-2': $vuetify.breakpoint.smOnly,
+            'display-3': !$vuetify.breakpoint.smAndDown,
+          }"
         />
       </div>
 

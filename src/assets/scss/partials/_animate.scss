@@ -1,13 +1,13 @@
 .a-from-bottom {
   opacity: 0;
-  transform: translateY(200px);
+  transform: translateY(180px);
   
   &.higher {
-    transform: translateY(180px);
+    transform: translateY(140px);
   }
   
   &.lower {
-    transform: translateY(240px);
+    transform: translateY(220px);
   }
 
   &.animate {

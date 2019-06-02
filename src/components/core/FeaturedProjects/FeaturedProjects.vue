@@ -4,12 +4,11 @@
     title="Featured Projects"
     :hr-line-props="{ right: true, width: '64vw' }"
   >
-    <v-container>
-      <carousel
-        v-bind="{ items }"
-        class="speed-3 a-from-bottom"
-        v-animate.100="{ above: true }"
-      >
+    <v-container
+      class="speed-3 a-from-bottom"
+      v-animate.100="{ above: true }"
+    >
+      <carousel v-bind="{ items }">
         <div slot-scope="{ item, index }">
           <!-- TODO: update content -->
           {{ index }}
