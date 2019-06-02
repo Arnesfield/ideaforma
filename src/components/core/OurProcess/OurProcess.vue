@@ -18,23 +18,24 @@
             hidden-md-and-up
           >
             <v-img
-              class="mx-auto"
+              v-animate.100
               style="width: 30%"
+              class="mx-auto speed-2 a-from-bottom"
               :src="`${imgPath}icon-gold-i.png`"
             />
           </v-flex>
 
           <v-flex
             xs12
-            sm12
+            sm6
             md4
           >
             <process-item
               :key="i"
-              v-animate.100
-              class="mx-auto"
+              v-animate.40
+              v-bind="item"
+              class="mx-auto a-from-bottom"
               v-for="(item, i) in leftItems"
-              v-bind="{ ...processItemProps, ...item }"
               :class="{
                 [`speed-${3 - i}`]: true,
                 'mr-5': isItemCenter(i, leftItems.length),
@@ -49,24 +50,24 @@
           >
             <v-img
               v-animate.100
-              class="speed-2"
+              class="speed-2 a-from-bottom"
               :src="`${imgPath}icon-gold-i.png`"
             />
           </v-flex>
 
           <v-flex
             xs12
-            sm12
+            sm6
             md4
           >
             <process-item
               :key="i"
-              v-animate.100
-              class="mx-auto"
+              v-animate.60
+              v-bind="item"
+              class="mx-auto a-from-bottom"
               v-for="(item, i) in rightItems"
-              v-bind="{ ...processItemProps, ...item }"
               :class="{
-                [`speed-${i + 1}`]: true,
+                [`speed-${4 - i}`]: true,
                 'ml-5': isItemCenter(i, rightItems.length),
                 'mr-5': isItemCenter(i, rightItems.length, true)
               }"
@@ -105,11 +106,6 @@ export default {
     // last 3
     rightItems() {
       return this.items.slice(3)
-    },
-
-    // ui
-    processItemProps() {
-      return { width: this.smallOnly ? 420 : undefined }
     },
 
     // ux

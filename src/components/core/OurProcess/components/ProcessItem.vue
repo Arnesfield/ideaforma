@@ -22,7 +22,7 @@
     </v-card-title>
 
     <v-card-text
-      class="px-1"
+      class="px-2"
       :class="textClass"
     >
       <div

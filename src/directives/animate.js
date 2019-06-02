@@ -1,6 +1,24 @@
 import Vue from 'vue'
 
 const ANIMATE_CLASS_NAME = 'animate'
+const COMPARE_KEYS = ['above', 'below']
+
+const ANIMATE_WHEN = (el, value, stat) => COMPARE_KEYS.every(k => {
+  const curr = value[k]
+  // add this curr class if stat[k] is true
+  if (typeof curr === 'string') {
+    if (stat[k]) {
+      el.classList.add(curr)
+    } else {
+      el.classList.remove(curr)
+    }
+
+    // disregard check
+    return true
+  }
+
+  return !!value[k] === !!stat[k]
+})
 
 // TODO: still disregards x or width of el
 const onScreenStat = function(el, offset = 0) {
@@ -48,7 +66,7 @@ Vue.directive('animate', {
         // either use modifier offset or prioritized value.offset
         offset = value.offset || offset
         // compare value value keys to stat keys
-        animateWhen = Object.keys(value).every(k => !!value[k] === !!stat[k])
+        animateWhen = ANIMATE_WHEN(el, value, stat)
       }
 
       const stat = onScreenStat(el, offset)
