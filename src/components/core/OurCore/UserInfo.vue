@@ -4,7 +4,9 @@
       primary
       class="title justify-center"
     >
-      <v-img :src="imgPath(src)"/>
+      <v-img 
+        :src="`${userImagePath}`"
+      />
     </v-card-title>
     <v-card-text class="pt-3">
       <div
@@ -20,7 +22,7 @@
 </template>
 
 <script>
-import { imgPath } from '@/helpers/path'
+import { userImagePath } from '@/utils/path'
 
 export default {
   name: 'user-info',
@@ -40,7 +42,7 @@ export default {
   },
 
   computed: {
-    imgPath: () => imgPath
+    userImagePath: () => userImagePath
   }
 }
 </script>

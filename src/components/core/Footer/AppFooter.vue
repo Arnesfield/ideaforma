@@ -2,7 +2,7 @@
   <v-container
     grid-list-lg
     fluid
-    style="background-color:#292927"
+    style="background-color:#292927 "
   >
     <!-- #292927 -->
     <v-card
@@ -68,7 +68,7 @@
           <div
             col
             wrap
-            class="body-2"
+            class="body-2 grey--text"
           >
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Nullam consectetur auctor odio, nec tempor mi placerat at.
@@ -79,7 +79,7 @@
           <div
             col
             wrap
-            class="body-2 pt-2"
+            class="body-2 pt-2 grey--text"
           >
             <v-icon
               class="pr-2"
@@ -90,7 +90,7 @@
           <div
             col
             wrap
-            class="body-2 pt-3"
+            class="body-2 pt-3 grey--text"
           >
             <v-icon
               class=" pr-3 light"
@@ -111,7 +111,7 @@
             <ul
               row
               wrap
-              class="body-2"
+              class="body-2 grey--text"
               style="columns: 2"
             >
               <li>Interior Designer</li>
@@ -123,7 +123,7 @@
           <div
             col
             wrap
-            class="body-2 pt-3"
+            class="body-2 pt-3 grey--text"
           >
             <p>
               Send your resume and cover letter to<br/>
@@ -139,6 +139,6 @@
 
 <script>
 export default {
-  name: 'footer'
+  name: 'app-footer'
 }
 </script>
