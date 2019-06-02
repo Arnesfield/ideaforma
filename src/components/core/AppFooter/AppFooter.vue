@@ -42,7 +42,7 @@
       <!-- Contact Us -->
       <v-flex
         xs12
-        sm4
+        sm6
         md4
         v-animate="animate"
         class="pt-4 white--text speed-2 a-from-bottom higher"
@@ -86,6 +86,7 @@
       <!-- Careers -->
       <v-flex
         xs12
+        sm6
         md4
         v-animate="animate"
         class="pt-4 white--text speed-3 a-from-bottom higher"
