@@ -6,6 +6,20 @@
     <achievements/>
     <our-core/>
     <app-footer/>
+
+    <!-- to top -->
+    <v-btn
+      fab
+      icon
+      fixed
+      right
+      bottom
+      color="primary"
+      @click="toTop"
+      class="mr-1 mb-1 elevation-4"
+    >
+      <v-icon>keyboard_arrow_up</v-icon>
+    </v-btn>
   </div>
 </template>
 
@@ -24,6 +38,16 @@ export default {
     OurProcess,
     Achievements,
     FeaturedProjects
+  },
+  
+  methods: {
+    toTop() {
+      this.$vuetify.goTo('#app', {
+        duration: 1000,
+        offset: 0,
+        easing: 'easeInOutCubic'
+      })
+    }
   }
 }
 </script>
