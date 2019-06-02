@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="pa-0"
+    class="pa-0 relative"
     v-bind="containerProps"
   >
     <v-layout column>
@@ -28,10 +28,13 @@
 
       <slot/>
     </v-layout>
+
+    <slot name="outside"/>
   </v-container>
 </template>
 
 <script>
+import { bgPath } from '@/utils/path'
 import HrLine from '@/components/utils/HrLine'
 
 export default {
@@ -54,6 +57,10 @@ export default {
       required: false,
       default: null
     }
+  },
+
+  computed: {
+    bgPath: () => bgPath
   }
 }
 </script>
