@@ -1,7 +1,7 @@
 export default [
   {
     number: 1,
-    title: 'Gettin to Know',
+    title: 'Getting to Know',
     text: "Let's get to know each other a little bit. We'll introduce ourselves and you can tell us your dreams, preferences, and design problems.",
     // props
     titlePos: 'right',

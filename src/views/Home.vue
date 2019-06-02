@@ -3,28 +3,27 @@
     <featured-projects/>
     <!-- TODO: add image separator here -->
     <our-process/>
-    <Achievements/>
+    <achievements/>
     <our-core/>
-    <Footer/>
+    <app-footer/>
   </div>
 </template>
 
 <script>
+import OurCore from '@/components/core/OurCore'
 import OurProcess from '@/components/core/OurProcess'
+import AppFooter from '@/components/core/Footer/AppFooter'
 import FeaturedProjects from '@/components/core/FeaturedProjects'
 import Achievements from '@/components/core/Achievements/Achievements'
-import OurCore from '@/components/core/OurCore'
-import Footer from '@/components/core/Footer/Footer'
-
 
 export default {
   name: 'home',
   components: {
-    OurProcess,
-    FeaturedProjects,
-    Achievements,
     OurCore,
-    Footer
+    AppFooter,
+    OurProcess,
+    Achievements,
+    FeaturedProjects
   }
 }
 </script>
