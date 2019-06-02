@@ -1,5 +1,5 @@
 <template>
-  <v-layout>
+  <v-layout :class="{ 'px-3': small }">
     <v-spacer v-if="right"/>
     <hr
       :style="{ width: mWidth }"

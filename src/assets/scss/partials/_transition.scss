@@ -1,5 +1,5 @@
 // speed
-$duration: 0.25 1 1.5 2;
+$duration: 0.25 0.75 1.25 1.75 2.25 2.75;
 
 @each $d in $duration {
   $i: index($duration, $d);

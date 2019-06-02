@@ -7,17 +7,17 @@
     <v-layout column>
       <div class="pa-3">
         <h1
-          v-animate.140
           v-text="title"
+          v-animate.140="{ above: true }"
           class="mt-5 display-3 primary--text text-xs-center speed-2 a-from-bottom"
         />
       </div>
 
       <div>
         <hr-line
-          v-animate.100
           v-bind="hrLineProps"
           class="speed-3 a-from-bottom"
+          v-animate.100="{ above: true }"
         />
       </div>
 

@@ -59,19 +59,14 @@ Vue.directive('animate', {
     el.$onScroll = function() {
       const { arg, value } = binding
       const isValueObject = value !== null && typeof value === 'object'
-      let offset = modOffset
-      let animateWhen = true
 
-      if (isValueObject) {
-        // either use modifier offset or prioritized value.offset
-        offset = value.offset || offset
-        // compare value value keys to stat keys
-        animateWhen = ANIMATE_WHEN(el, value, stat)
-      }
-
+      // either use modifier offset or prioritized value.offset
+      const offset = isValueObject && value.offset ? value.offset : modOffset
       const stat = onScreenStat(el, offset)
+      // compare value value keys to stat keys
+      const animateWhen = isValueObject ? ANIMATE_WHEN(el, value, stat) : false
 
-      if (stat.visible && animateWhen) {
+      if (stat.visible || animateWhen) {
         el.classList.add(ANIMATE_CLASS_NAME)
         // def.unbind(el, binding)
       } else {

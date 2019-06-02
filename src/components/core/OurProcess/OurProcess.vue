@@ -18,9 +18,9 @@
             hidden-md-and-up
           >
             <v-img
-              v-animate.100
               style="width: 30%"
               class="mx-auto speed-2 a-from-bottom"
+              v-animate.100="{ above: true }"
               :src="`${imgPath}icon-gold-i.png`"
             />
           </v-flex>
@@ -32,12 +32,12 @@
           >
             <process-item
               :key="i"
-              v-animate.40
               v-bind="item"
               class="mx-auto a-from-bottom"
+              v-animate.40="{ above: true }"
               v-for="(item, i) in leftItems"
               :class="{
-                [`speed-${3 - i}`]: true,
+                [`speed-${i + 1}`]: true,
                 'mr-5': isItemCenter(i, leftItems.length),
                 'ml-5': isItemCenter(i, leftItems.length, true)
               }"
@@ -49,8 +49,8 @@
             hidden-sm-and-down
           >
             <v-img
-              v-animate.100
               class="speed-2 a-from-bottom"
+              v-animate.100="{ above: true }"
               :src="`${imgPath}icon-gold-i.png`"
             />
           </v-flex>
@@ -62,12 +62,12 @@
           >
             <process-item
               :key="i"
-              v-animate.60
               v-bind="item"
-              class="mx-auto a-from-bottom"
+              v-animate.60="{ above: true }"
               v-for="(item, i) in rightItems"
+              class="mx-auto a-from-bottom lower"
               :class="{
-                [`speed-${4 - i}`]: true,
+                [`speed-${i + 2}`]: true,
                 'ml-5': isItemCenter(i, rightItems.length),
                 'mr-5': isItemCenter(i, rightItems.length, true)
               }"

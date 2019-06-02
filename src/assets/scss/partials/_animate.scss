@@ -1,6 +1,14 @@
 .a-from-bottom {
   opacity: 0;
-  transform: translateY(160px);
+  transform: translateY(200px);
+  
+  &.higher {
+    transform: translateY(180px);
+  }
+  
+  &.lower {
+    transform: translateY(240px);
+  }
 
   &.animate {
     opacity: 1;
