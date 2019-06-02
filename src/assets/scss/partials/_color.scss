@@ -1,3 +1,13 @@
+$clr-footer: #292927;
+
 .bg-quite-grey {
-  background-color: #ececec;
+  background-color: #ececec !important;
+}
+
+.bg-footer {
+  background-color: $clr-footer !important;
+}
+
+.color-footer {
+  color: $clr-footer !important;
 }
