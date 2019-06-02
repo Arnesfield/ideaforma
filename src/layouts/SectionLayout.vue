@@ -10,7 +10,7 @@
       <div class="pa-3">
         <h1
           v-text="title"
-          v-animate.140="{ above: true }"
+          v-animate="{ above: true }"
           class="mt-5 primary--text text-xs-center speed-2 a-from-bottom"
           :class="{
             'display-1': $vuetify.breakpoint.xsOnly,
@@ -24,7 +24,7 @@
         <hr-line
           v-bind="hrLineProps"
           class="speed-3 a-from-bottom"
-          v-animate.100="{ above: true }"
+          v-animate="{ above: true }"
         />
       </div>
 
