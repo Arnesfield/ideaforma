@@ -1,1 +1,1 @@
-import './onscreen'
+import './animate'

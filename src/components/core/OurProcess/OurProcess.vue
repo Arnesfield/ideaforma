@@ -3,9 +3,7 @@
     <section-layout
       class="pb-5"
       title="Our Process"
-      :title-animate="animate"
       :hr-line-props="{ width: '60vw' }"
-      v-onscreen.200="v => TR = v"
     >
       <v-container class="y-auto px-2">
         <v-layout
@@ -31,34 +29,29 @@
             sm12
             md4
           >
-            <v-expand-transition
+            <process-item
               :key="i"
+              v-animate.100
+              class="mx-auto"
               v-for="(item, i) in leftItems"
-            >
-              <process-item
-                v-show="TR"
-                class="mx-auto"
-                v-bind="{ ...processItemProps, ...item }"
-                :class="{
-                  [`speed-${3 - i}`]: true,
-                  'mr-5': isItemCenter(i, leftItems.length),
-                  'ml-5': isItemCenter(i, leftItems.length, true)
-                }"
-              />
-            </v-expand-transition>
+              v-bind="{ ...processItemProps, ...item }"
+              :class="{
+                [`speed-${3 - i}`]: true,
+                'mr-5': isItemCenter(i, leftItems.length),
+                'ml-5': isItemCenter(i, leftItems.length, true)
+              }"
+            />
           </v-flex>
 
           <v-flex
             md4
             hidden-sm-and-down
           >
-            <v-bottom-sheet-transition>
-              <v-img
-                v-show="TR"
-                class="speed-2"
-                :src="`${imgPath}icon-gold-i.png`"
-              />
-            </v-bottom-sheet-transition>
+            <v-img
+              v-animate.100
+              class="speed-2"
+              :src="`${imgPath}icon-gold-i.png`"
+            />
           </v-flex>
 
           <v-flex
@@ -66,22 +59,18 @@
             sm12
             md4
           >
-            <v-expand-transition
+            <process-item
               :key="i"
+              v-animate.100
+              class="mx-auto"
               v-for="(item, i) in rightItems"
-            >
-              <process-item
-                :key="i"
-                v-show="TR"
-                class="mx-auto"
-                v-bind="{ ...processItemProps, ...item }"
-                :class="{
-                  [`speed-${i + 1}`]: true,
-                  'ml-5': isItemCenter(i, rightItems.length),
-                  'mr-5': isItemCenter(i, rightItems.length, true)
-                }"
-              />
-            </v-expand-transition>
+              v-bind="{ ...processItemProps, ...item }"
+              :class="{
+                [`speed-${i + 1}`]: true,
+                'ml-5': isItemCenter(i, rightItems.length),
+                'mr-5': isItemCenter(i, rightItems.length, true)
+              }"
+            />
           </v-flex>
         </v-layout>
       </v-container>
@@ -91,23 +80,19 @@
 
 <script>
 import { ourProcess } from '@/data'
-import { animatable } from '@/mixins'
 import { imgPath } from '@/utils/path'
 import ProcessItem from './components/ProcessItem'
 import SectionLayout from '@/layouts/SectionLayout'
 
 export default {
   name: 'our-process',
-  mixins: [animatable],
   components: {
     ProcessItem,
     SectionLayout
   },
 
   data: () => ({
-    items: ourProcess,
-    // ux
-    TR: false
+    items: ourProcess
   }),
 
   computed: {

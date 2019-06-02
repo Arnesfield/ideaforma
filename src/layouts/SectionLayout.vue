@@ -6,23 +6,19 @@
   >
     <v-layout column>
       <div class="pa-3">
-        <v-slide-y-transition>
-          <h1
-            v-text="title"
-            v-show="titleAnimate"
-            class="mt-5 display-3 primary--text text-xs-center speed-4"
-          />
-        </v-slide-y-transition>
+        <h1
+          v-animate.140
+          v-text="title"
+          class="mt-5 display-3 primary--text text-xs-center speed-4"
+        />
       </div>
 
       <div>
-        <v-slide-x-transition>
-          <hr-line
-            class="speed-4"
-            v-bind="hrLineProps"
-            v-show="titleAnimate"
-          />
-        </v-slide-x-transition>
+        <hr-line
+          v-animate.140
+          class="speed-4"
+          v-bind="hrLineProps"
+        />
       </div>
 
       <slot/>
@@ -42,11 +38,6 @@ export default {
     title: {
       type: String,
       required: true
-    },
-    titleAnimate: {
-      type: Boolean,
-      default: false,
-      required: false
     },
     containerProps: {
       type: Object,
