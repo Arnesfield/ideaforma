@@ -1,112 +1,89 @@
 <template>
-  <div>
-
-    <v-container
-      class="pa-0 ma-0"
-      fluid
+  <div class="white">
+    <section-layout
+      class="pb-5"
+      title="Our Core"
+      :hr-line-props="{ width: '57vw' }"
     >
-      <v-layout
-        row
-        wrap
+
+      <v-container
+        grid-list-lg
+        class="speed-3 a-from-bottom"
+        v-animate.100="{ above: true }"
       >
-        <v-flex
-          xs12
-          md12
-          lg12
-          class="text-md-center text-sm-center text-xs-center pt-4"
+        <v-layout
+          row
+          wrap
+          class=" text-md-center text-sm-center text-xs-center"
         >
-          <div class="display-1 pb-1 primary--text mt-5">Our Core</div>
-        </v-flex>
-      
-        <v-flex
-          xs12
-          md8
-          lg8
-        >
-          <hr style="border-top: 2px solid Black"/>
-        </v-flex>
-      </v-layout>
-    </v-container>
-
-    <v-container grid-list-lg>
-      <v-layout
-        row
-        wrap
-        class=" text-md-center text-sm-center text-xs-center"
-      >
-        <v-flex
-          xs12
-          md4
-          class="pt-4 white--text"
-          :key="i"
-          v-for="(user, i) in users"
-          :class="{ 'mt-5': i == 0 || i == users.length - 1 }"
-        >
-
-          <!-- FIXME: separate this into component -->
-          <user-info
-            :name="user.name"
-            :description="user.description"
-            :src="user.src"
-          />
-        </v-flex>
-      </v-layout>
-
-      <v-layout>
-        <v-spacer/>
-
-        <div
-          xs12
-          md4
-          class="pt-4"
-        >
-          <v-btn
-            flat
-            class="font-italic"
+          <v-flex
+            xs12
+            sm4
+            md4
+            :key="i"
+            v-for="(user, i) in team"
+            v-animate.140="{ above: true }"
+            class="pt-4 white--text a-from-bottom"
+            :class="{
+              [`speed-${i + 2}`]: true,
+              'mt-5': !small && (i == 0 || i == team.length - 1)
+            }"
           >
-            <span class="mr-1">Meet The Team</span>
-            <v-icon>chevron_right</v-icon>
-          </v-btn>
-        </div>
-      </v-layout>
 
-    </v-container>
+            <!-- FIXME: separate this into component -->
+            <user-info
+              :name="user.name"
+              :description="user.description"
+              :src="user.src"
+            />
+          </v-flex>
+        </v-layout>
+
+        <v-layout>
+          <v-spacer/>
+
+          <div
+            xs12
+            md4
+            class="pt-4"
+          >
+            <v-btn
+              flat
+              large
+              class="font-italic"
+              color="grey darken-1"
+            >
+              <span class="mr-1">Meet the Team</span>
+              <v-icon>chevron_right</v-icon>
+            </v-btn>
+          </div>
+        </v-layout>
+
+      </v-container>
+    </section-layout>
   </div>
 </template>
 
 <script>
+import { team } from '@/data'
 import UserInfo from './UserInfo'
+import SectionLayout from '@/layouts/SectionLayout'
 
 export default {
   name: 'core',
   components: {
-    UserInfo
+    UserInfo,
+    SectionLayout
   },
 
   data: () => ({
-    users: [
-      {
-        name: 'Nina Gomez-Camacho',
-        description: `Nina's laser eye for details and passion for excellence becomes the standard for all project 
-        management tasks within the company. Once her goals are set, achieving them is as sure as the sun rising
-        in the east.`,
-        src: 'Nina.png'
-      },
-      {
-        name: 'Dr. Malen Gomez-Garcia',
-        description: `With over 15 years of experience in the design field, Malen's style and creative eye
-        has proven itself to surpass time and trends. Her ability to understand and interpret your ideas into
-        tangible output will leave you in awe wanting for more.`,
-        src: 'Malen.png'
-      },
-      {
-        name: 'Rico Gomez',
-        description: `Eager to please, Rico exhausts all possible solutions to be able to offer our clients the 
-        best options. This enables him to see new business opportunities and services we can possibly offer to others. `,
-        src: 'Rico.png'
-      }
-    ]
-  })
+    team
+  }),
+
+  computed: {
+    small() {
+      return this.$vuetify.breakpoint.xsOnly
+    }
+  }
 }
 </script>
-
