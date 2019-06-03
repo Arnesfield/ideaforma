@@ -2,7 +2,7 @@
   <section-layout
     class="bg-quite-grey"
     title="Featured Projects"
-    :hr-line-props="{ right: true, width: '64vw' }"
+    :hr-line-props="{ right: true, width: '65vw' }"
   >
     <div
       slot="outside"

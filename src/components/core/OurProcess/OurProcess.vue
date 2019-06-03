@@ -3,7 +3,7 @@
     <section-layout
       class="pb-5"
       title="Our Process"
-      :hr-line-props="{ width: '60vw' }"
+      :hr-line-props="{ width: '61vw' }"
     >
       <v-container class="y-auto px-2">
         <v-layout

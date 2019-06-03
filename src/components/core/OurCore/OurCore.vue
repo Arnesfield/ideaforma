@@ -3,7 +3,7 @@
     <section-layout
       class="pb-5"
       title="Our Core"
-      :hr-line-props="{ width: '57vw' }"
+      :hr-line-props="{ width: '58vw' }"
     >
 
       <v-container

@@ -1,6 +1,7 @@
 .a-from-bottom {
   opacity: 0;
   transform: translateY(180px);
+  transition-property: transform, opacity;
   
   &.higher {
     transform: translateY(140px);
