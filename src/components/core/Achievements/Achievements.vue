@@ -32,7 +32,7 @@
             justify-center
           >
             <h1 class="display-3">23K</h1>
-            <p class="body-1 text-capitalize"> sqm turned over</p>
+            <p class="body-1 text-uppercase"> sqm turned over</p>
           </v-layout>
         </v-container>
       </v-flex>
@@ -48,7 +48,7 @@
             justify-center
           >
             <h1 class="display-3">2.2</h1>
-            <p class="body-1 text-capitalize">Terabytes of Data</p>
+            <p class="body-1 text-uppercase">Terabytes of Data</p>
           </v-layout>
         </v-container>
       </v-flex>
@@ -86,7 +86,7 @@
             />
             <p
               v-text="`Condominium Units`"
-              class="body-1"
+              class="body-1 text-uppercase"
             />
           </v-layout>
         </v-container>
@@ -123,8 +123,8 @@
             align-center
             justify-center
           >
-            <h1 class="display-3">23K</h1>
-            <p class="body-1 text-capitalize"> sqm turned over</p>
+            <h1 class="display-3">34</h1>
+            <p class="body-1 text-uppercase"> commercial spaces</p>
           </v-layout>
         </v-container>
       </v-flex>

@@ -15,7 +15,7 @@
         />
         <p
           v-text="text"
-          class="body-1 text-capitalize"
+          class="body-1 text-uppercase"
         />
       
       </v-layout>
