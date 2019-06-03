@@ -3,13 +3,15 @@ const imgPath = assetsPath + 'img/'
 const bgPath = imgPath + 'bg/'
 const logoPath = imgPath + 'logo/'
 const teamPath = imgPath + 'team/'
+const iconPath = imgPath + 'icons/'
 
 export {
   assetsPath,
   imgPath,
   bgPath,
   logoPath,
-  teamPath
+  teamPath,
+  iconPath
 }
 
 export default {
@@ -17,5 +19,6 @@ export default {
   imgPath,
   bgPath,
   logoPath,
-  teamPath
+  teamPath,
+  iconPath
 }

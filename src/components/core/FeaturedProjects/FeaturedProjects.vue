@@ -65,6 +65,7 @@ export default {
   computed: {
     bgPath: () => bgPath,
 
+    // FXIME: redundant hehe
     imgWidth() {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs': return '75vw'
