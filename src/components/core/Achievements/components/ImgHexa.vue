@@ -1,17 +1,18 @@
 <template>
-  <v-img
-    v-bind="{ src }"
-    style="width: 50%;"
-  >
-    <v-container fill-height>
+  <v-img v-bind="{ src }">
+    <v-container
+      fill-height
+      class="pa-0"
+    >
       <v-layout
         column
         align-center
         justify-center
+        class="mx-auto"
       >
         <h1
           v-text="title"
-          class="display-3"
+          class="display-3 font-weight-bold"
         />
         <p
           v-text="text"

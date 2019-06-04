@@ -6,18 +6,12 @@
       :hr-line-props="{ width: '57vw' }"
     >
 
-      <div
+      <bg-poly
+        opacity="0.3"
         slot="outside"
-        style="bottom: 0; right: 0"
-        class="absolute speed-5 a-from-bottom lower"
-        v-animate="{ above: true, offset: -200 }"
-      >
-        <v-img
-          style="opacity: 0.5"
-          :style="{ width: imgWidth }"
-          :src="`${bgPath}bg-black-poly.png`"
-        />
-      </div>
+        style="right: 0"
+        img="bg-black-poly.png"
+      />
 
       <v-container
         grid-list-lg
@@ -51,33 +45,20 @@
 
 <script>
 import { service } from '@/data'
-import { bgPath } from '@/utils/path'
+import BgPoly from '@/components/utils/BgPoly'
 import ServiceInfo from './components/ServiceInfo'
 import SectionLayout from '@/layouts/SectionLayout'
 
 export default {
   name: 'services',
   components: {
+    BgPoly,
     ServiceInfo,
     SectionLayout
   },
 
   data: () => ({
     service
-  }),
-
-  computed: {
-    bgPath: () => bgPath,
-
-    imgWidth() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs': return '75vw'
-        case 'sm':
-        case 'md':
-          return '50vw'
-        default: return '30vw'
-      }
-    }
-  }
+  })
 }
 </script>

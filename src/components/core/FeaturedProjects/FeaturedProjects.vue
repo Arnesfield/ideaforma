@@ -4,18 +4,11 @@
     title="Featured Projects"
     :hr-line-props="{ right: true, width: '65vw' }"
   >
-    <div
+    <bg-poly
+      opacity="0.5"
       slot="outside"
-      style="bottom: 0"
-      class="absolute speed-5 a-from-bottom lower"
-      v-animate="{ above: true, offset: -200 }"
-    >
-      <v-img
-        style="opacity: 0.75"
-        :style="{ width: imgWidth }"
-        :src="`${bgPath}bg-gold-poly.png`"
-      />
-    </div>
+      img="bg-gold-poly.png"
+    />
 
     <v-container
       class="speed-3 a-from-bottom"
@@ -46,35 +39,21 @@
 </template>
 
 <script>
-import { bgPath } from '@/utils/path'
 import { featuredProjects } from '@/data'
+import BgPoly from '@/components/utils/BgPoly'
 import Carousel from '@/components/utils/Carousel'
 import SectionLayout from '@/layouts/SectionLayout'
 
 export default {
   name: 'featured-projects',
   components: {
+    BgPoly,
     Carousel,
     SectionLayout
   },
 
   data: () => ({
     items: featuredProjects
-  }),
-
-  computed: {
-    bgPath: () => bgPath,
-
-    // FXIME: redundant hehe
-    imgWidth() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs': return '75vw'
-        case 'sm':
-        case 'md':
-          return '50vw'
-        default: return '30vw'
-      }
-    }
-  }
+  })
 }
 </script>

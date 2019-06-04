@@ -1,156 +1,101 @@
 <template>
-  <v-container
-    fluid
-    grid-list-lg
-  >
-    <v-layout
-      row
-      align-center
-      justify-center 
-      ma-0
+  <div class="bg-quite-grey">
+    <v-container
+      grid-list-lg
+      class="relative"
     >
-      <v-flex
-        md4
-        class="text-xs-center ml-5 pa-0"
-      >
-        <!-- TODO: separate this to component -->
-        <img-hexa
-          :src="`${bgPath}bg-years-in-business.png`"
-          title="11"
-          text="Years in Business"
-        />
-      </v-flex>
+      <bg-poly
+        opacity="0.25"
+        style="right: 0"
+        img="bg-gold-poly.png"
+      />
 
-      <v-flex
-        md4
-        class="text-xs-center"
-      >
-        <v-container>
-          <v-layout
-            column
-            align-center
-            justify-center
-          >
-            <h1 class="display-3">23K</h1>
-            <p class="body-1 text-uppercase"> sqm turned over</p>
-          </v-layout>
-        </v-container>
-      </v-flex>
-
-      <v-flex
-        md3
-        class="text-xs-center"
-      >
-        <v-container>
-          <v-layout
-            column
-            align-center
-            justify-center
-          >
-            <h1 class="display-3">2.2</h1>
-            <p class="body-1 text-uppercase">Terabytes of Data</p>
-          </v-layout>
-        </v-container>
-      </v-flex>
-    </v-layout>
-
-    <!-- Second Row -->
-
-    <v-layout
-      row
-      align-center
-      justify-center 
-      ma-0
-    >
-      <v-flex
-        md4
-        class="text-xs-center ml-5 pa-0"
-      >
-        <img-hexa
-          :src="`${bgPath}bg-residential-houses.png`"
-          title="54"
-          text="Residential Houses"
-        />
-      </v-flex>
-
-      <v-flex md4>
-        <v-container>
-          <v-layout 
-            column
-            align-center
-            justify-center
-          >
-            <h1
-              v-text="84"
-              class="display-3"
-            />
-            <p
-              v-text="`Condominium Units`"
-              class="body-1 text-uppercase"
-            />
-          </v-layout>
-        </v-container>
-      </v-flex>
-
-      <v-flex
-        md4
-        class="text-xs-center ml-5 pa-0"
+      <v-layout
+        row
+        ma-0
+        wrap
         align-center
-        justify-center
+        justify-center 
       >
-        <!-- TODO: separate this to component -->
-        <img-hexa
-          :src="`${bgPath}bg-unique-cities.png`"
-          title="17"
-          text="Unique Cities"
-        />
-      </v-flex>
-    </v-layout>
-    <!-- Third Row -->
-    <v-layout
-      row
-      align-center
-      justify-center
-      ma-0
-    >
-      <v-flex
-        md6
-        class="text-xs-center"
-      >
-        <v-container>
-          <v-layout
-            column
-            align-center
-            justify-center
-          >
-            <h1 class="display-3">34</h1>
-            <p class="body-1 text-uppercase"> commercial spaces</p>
-          </v-layout>
-        </v-container>
-      </v-flex>
+        <div style="width: 256px">
+          <img-hexa
+            title="11"
+            class="mx-auto"
+            text="Years in Business"
+            :src="`${bgPath}bg-years-in-business.png`"
+          />
+        </div>
 
-      <v-flex
-        md6
-        class="text-xs-center ml-5 pa-0"
+        <div
+          class="pa-3 px-5 text-xs-center white"
+          style="border: 1.5px solid #ccc !important"
+        >
+          <h1 class="display-3 font-weight-bold">23K</h1>
+          <p class="body-1 text-uppercase"> sqm turned over</p>
+        </div>
+
+        <div class="pa-3 text-xs-center">
+          <h1 class="display-3 font-weight-bold">2.2</h1>
+          <p class="body-1 text-uppercase">Terabytes of Data</p>
+        </div>
+      </v-layout>
+
+      <!-- Second Row -->
+
+      <v-layout
+        row
+        ma-0
+        wrap
+        justify-center 
       >
-        <!-- TODO: separate this to component -->
-        <img-hexa
-          :src="`${bgPath}bg-residential-houses.png`"
-          title="8"
-          text="Office Spaces"
-        />
-      </v-flex>
-    </v-layout>
-  </v-container>
+        <div style="width: 208px">
+          <img-hexa
+            title="54"
+            text="Residential Houses"
+            :src="`${bgPath}bg-residential-houses.png`"
+          />
+        </div>
+
+        <div class="pa-3 text-xs-center">
+          <h1 class="display-3 font-weight-bold">84</h1>
+          <p class="body-1 text-uppercase">Condominium Units</p>
+        </div>
+
+        <div class="pa-3 text-xs-center">
+          <h1 class="display-3 font-weight-bold">34</h1>
+          <p class="body-1 text-uppercase">Commercial Spaces</p>
+        </div>
+
+        <div style="width: 256px">
+          <img-hexa
+            :src="`${bgPath}bg-unique-cities.png`"
+            title="17"
+            text="Unique Cities"
+          />
+        </div>
+
+        <div style="width: 208px;">
+          <img-hexa
+            title="8"
+            text="Office Spaces"
+            :src="`${bgPath}bg-residential-houses.png`"
+          />
+        </div>
+      </v-layout>
+      
+    </v-container>
+  </div>
 </template>
 
 <script>
 import { bgPath } from '@/utils/path'
 import ImgHexa from './components/ImgHexa'
+import BgPoly from '@/components/utils/BgPoly'
 
 export default {
   name: 'achievements',
   components: {
+    BgPoly,
     ImgHexa
   },
 

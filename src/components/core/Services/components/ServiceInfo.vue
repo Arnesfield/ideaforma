@@ -10,15 +10,17 @@
       <div style="width: 50%">
         <v-img
           :src="`${iconPath}${src}`"
-          class="speed-3 a-from-bottom"
+          class="a-from-bottom"
+          :class="speed"
           v-animate.40="{ above: true }"
         />
       </div>
     </v-card-title>
 
     <v-card-text
+      :class="speed"
       v-animate="{ above: true }"
-      class="pt-3 speed-3 a-from-bottom"
+      class="pt-3 a-from-bottom"
     >
       <div
         v-text="name"
@@ -49,6 +51,11 @@ export default {
     src: {
       type: String,
       required: true
+    },
+    speed: {
+      type: String,
+      required: false,
+      default: 'speed-3'
     }
   },
 
