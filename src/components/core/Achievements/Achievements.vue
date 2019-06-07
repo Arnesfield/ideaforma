@@ -20,15 +20,14 @@
         <div style="width: 256px">
           <img-hexa
             title="11"
-            v-animate="animate"
-            class="mx-auto pt-4 speed-3 a-from-bottom higher"
+            class="mx-auto pt-4"
             text="Years in Business"
             :src="`${bgPath}bg-years-in-business.png`"
           />
         </div>
 
         <div
-          v-animate="animate"
+          v-animate
           class="pa-3 px-5 text-xs-center white speed-3 a-from-bottom higher"
           style="border: 1.5px solid #ccc !important"
         >
@@ -57,7 +56,7 @@
             title="54"
             text="Residential Houses"
             :src="`${bgPath}bg-residential-houses.png`"
-            v-animate="animate"
+            v-animate
             class=" pt-4 speed-3 a-from-bottom higher"
           />
         </div>
@@ -77,7 +76,7 @@
             :src="`${bgPath}bg-unique-cities.png`"
             title="17"
             text="Unique Cities"
-            v-animate="animate"
+            v-animate
             class="speed-3 a-from-bottom"
           />
         </div>
@@ -87,7 +86,7 @@
             title="8"
             text="Office Spaces"
             :src="`${bgPath}bg-residential-houses.png`"
-            v-animate="animate"
+            v-animate
             class=" speed-3 a-from-bottom higher"
           />
         </div>
