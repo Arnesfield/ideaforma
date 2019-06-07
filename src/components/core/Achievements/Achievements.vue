@@ -20,21 +20,25 @@
         <div style="width: 256px">
           <img-hexa
             title="11"
-            class="mx-auto"
+            v-animate="animate"
+            class="mx-auto pt-4 speed-3 a-from-bottom higher"
             text="Years in Business"
             :src="`${bgPath}bg-years-in-business.png`"
           />
         </div>
 
         <div
-          class="pa-3 px-5 text-xs-center white"
+          v-animate="animate"
+          class="pa-3 px-5 text-xs-center white speed-3 a-from-bottom higher"
           style="border: 1.5px solid #ccc !important"
         >
           <h1 class="display-3 font-weight-bold">23K</h1>
           <p class="body-1 text-uppercase"> sqm turned over</p>
         </div>
 
-        <div class="pa-3 text-xs-center">
+        <div 
+          class="pa-3 text-xs-center"
+        >
           <h1 class="display-3 font-weight-bold">2.2</h1>
           <p class="body-1 text-uppercase">Terabytes of Data</p>
         </div>
@@ -53,6 +57,8 @@
             title="54"
             text="Residential Houses"
             :src="`${bgPath}bg-residential-houses.png`"
+            v-animate="animate"
+            class=" pt-4 speed-3 a-from-bottom higher"
           />
         </div>
 
@@ -71,6 +77,8 @@
             :src="`${bgPath}bg-unique-cities.png`"
             title="17"
             text="Unique Cities"
+            v-animate="animate"
+            class="speed-3 a-from-bottom"
           />
         </div>
 
@@ -79,6 +87,8 @@
             title="8"
             text="Office Spaces"
             :src="`${bgPath}bg-residential-houses.png`"
+            v-animate="animate"
+            class=" speed-3 a-from-bottom higher"
           />
         </div>
       </v-layout>
