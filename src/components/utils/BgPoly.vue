@@ -18,6 +18,11 @@ import { bgPath } from '@/utils/path'
 export default {
   name: 'bg-poly',
   props: {
+    xsWidth: {
+      type: String,
+      required: false,
+      default: '75vw'
+    },
     img: {
       type: String,
       required: true
@@ -39,7 +44,7 @@ export default {
 
     imgWidth() {
       switch (this.$vuetify.breakpoint.name) {
-        case 'xs': return '75vw'
+        case 'xs': return this.xsWidth ? this.xsWidth : '75vw'
         case 'sm':
         case 'md':
           return '50vw'

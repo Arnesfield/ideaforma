@@ -37,7 +37,6 @@
             <service-info v-bind="user"/>
           </v-flex>
         </v-layout>
-
       </v-container>
     </section-layout>
   </div>
