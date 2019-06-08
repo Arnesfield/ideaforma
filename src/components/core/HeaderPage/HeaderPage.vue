@@ -59,17 +59,39 @@
 
           <v-flex
             xs12
-            sm9
-            md9
+            sm10
+            md10
             v-animate="{ above: true }"
             class="speed-4 a-from-bottom lower"
-            style="background-color: rgba(181, 136, 55, 0.8)"
+            style="background-color: rgba(181, 136, 55, 0.8);"
           >
             <v-container
               class="white--text pa-5"
             >
               <v-layout justify-end>
+                <v-btn
+                  flat
+                  icon
+                  class="wh-64"
+                >
+                  <v-icon
+                    color="#fefefe"
+                    x-large
+                  >chevron_left</v-icon>
+                </v-btn>
+
                 <h1 class="display-2 mb-2">We create homes in the Philippines</h1>
+                
+                <v-btn
+                  flat
+                  icon
+                  class="wh-64"
+                >
+                  <v-icon
+                    color="#fefefe"
+                    x-large
+                  >chevron_right</v-icon>
+                </v-btn>
               </v-layout>
 
               <v-layout justify-center>
