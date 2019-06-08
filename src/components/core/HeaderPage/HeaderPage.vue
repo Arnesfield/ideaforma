@@ -67,7 +67,10 @@
             <v-container
               class="white--text py-5 ma-0"
             >
-              <v-layout align-center justify-center>
+              <v-layout
+                align-center
+                justify-center
+              >
                 <v-btn v-bind="btnProps">
                   <v-icon
                     x-large
