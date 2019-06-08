@@ -2,7 +2,7 @@
   <div
     style="bottom: 0"
     class="absolute speed-5 a-from-bottom lower"
-    v-animate="{ above: true, offset: -200 }"
+    v-animate="{ above: true, offset: 40 }"
   >
     <v-img
       v-bind="imgProps"
