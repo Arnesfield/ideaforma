@@ -62,7 +62,8 @@
             sm9
             md9
             v-animate="{ above: true }"
-            class="primary speed-4 a-from-bottom lower"
+            class="speed-4 a-from-bottom lower"
+            style="background-color: rgba(181, 136, 55, 0.8)"
           >
             <v-container
               class="white--text pa-5"
@@ -71,7 +72,7 @@
                 <h1 class="display-2 mb-2">We create homes in the Philippines</h1>
               </v-layout>
 
-              <v-layout justify-end>
+              <v-layout justify-center>
                 <v-btn
                   large
                   outline
