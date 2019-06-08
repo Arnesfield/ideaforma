@@ -20,13 +20,12 @@
           class="absolute x-full y-full"
         >
           <v-flex
-            offset-md4
             xs12
             md8
-            :style="!this.$vuetify.breakpoint.xsOnly ? { 'height': 'auto' } : null"
+            offset-md4
           >
             <v-img
-              v-animate
+              v-animate="{ above: true }"
               :style="{ height: containerHeight }"
               :src="`${bgPath}/bg-office-section.png`"
               class="pa-3 px-5 text-xs-center white speed-3 a-from-bottom lower"
@@ -50,8 +49,8 @@
           >
             <v-img
               contain
-              v-animate
               aspect-ratio="3.0"
+              v-animate="{ above: true }"
               class="speed-5 a-from-bottom"
               :src="`${logoPath}/logo-full-transparent.png`"
             />
@@ -63,46 +62,48 @@
             md10
             v-animate="{ above: true }"
             class="speed-4 a-from-bottom lower"
-            style="background-color: rgba(181, 136, 55, 0.8);"
+            :style="{ 'background-color': primaryOpac }"
           >
             <v-container
-              class="white--text pa-5"
+              class="white--text py-5 ma-0"
             >
-              <v-layout justify-end>
-                <v-btn
-                  flat
-                  icon
-                  class="wh-64"
-                >
+              <v-layout align-center justify-center>
+                <v-btn v-bind="btnProps">
                   <v-icon
-                    color="#fefefe"
                     x-large
+                    color="white"
                   >chevron_left</v-icon>
                 </v-btn>
 
-                <h1 class="display-2 mb-2">We create homes in the Philippines</h1>
-                
-                <v-btn
-                  flat
-                  icon
-                  class="wh-64"
-                >
+                <v-spacer/>
+
+                <div>
+                  <v-layout justify-end>
+                    <h1 class="display-2">We create homes in the Philippines</h1>
+                  </v-layout>
+
+                  <v-layout>
+                    <v-btn
+                      large
+                      outline
+                      color="white"
+                      class="font-weight-bold mt-3"
+                    >Learn More</v-btn>
+
+                  </v-layout>
+                </div>
+
+                <v-spacer/>
+
+                <v-btn v-bind="btnProps">
                   <v-icon
-                    color="#fefefe"
                     x-large
+                    color="white"
                   >chevron_right</v-icon>
                 </v-btn>
-              </v-layout>
-
-              <v-layout justify-center>
-                <v-btn
-                  large
-                  outline
-                  color="white"
-                  class="font-weight-bold"
-                >Learn More</v-btn>
 
               </v-layout>
+
             </v-container>
           </v-flex>
         </div>
@@ -128,7 +129,29 @@ export default {
 
   computed: {
     bgPath: ()  => bgPath,
-    logoPath: () => logoPath
+    logoPath: () => logoPath,
+    primaryOpac() {
+      const color = this.$vuetify.theme.primary
+      return `${color}cc`
+    },
+
+    small() {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+
+    controlSize() {
+      return this.small ? 32 : 64
+    },
+
+    btnProps() {
+      return {
+        flat: true,
+        icon: true,
+        large: true,
+        color: 'white',
+        class: `wh-${this.controlSize}`
+      }
+    }
   }
 }
 </script>
