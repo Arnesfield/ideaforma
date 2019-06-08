@@ -5,7 +5,7 @@
       class="relative"
     >
       <bg-poly
-        opacity="0.25"
+        opacity="0.65"
         style="right: 0"
         img="bg-gold-poly.png"
       />
@@ -17,7 +17,11 @@
         align-center
         justify-center 
       >
-        <div style="width: 256px">
+        <div
+          style="width: 256px"
+          v-animate.180="{ above: true }"
+          class="speed-5 a-from-bottom lower"
+        >
           <img-hexa
             title="11"
             class="mx-auto pt-4"
@@ -27,16 +31,17 @@
         </div>
 
         <div
-          v-animate
-          class="pa-3 px-5 text-xs-center white speed-3 a-from-bottom higher"
+          v-animate.40="{ above: true }"
           style="border: 1.5px solid #ccc !important"
+          class="pa-3 px-5 text-xs-center white speed-4 a-from-bottom"
         >
           <h1 class="display-3 font-weight-bold">23K</h1>
           <p class="body-1 text-uppercase"> sqm turned over</p>
         </div>
 
         <div 
-          class="pa-3 text-xs-center"
+          v-animate.120="{ above: true }"
+          class="pa-3 text-xs-center speed-5 a-from-bottom lower"
         >
           <h1 class="display-3 font-weight-bold">2.2</h1>
           <p class="body-1 text-uppercase">Terabytes of Data</p>
@@ -56,38 +61,48 @@
             title="54"
             text="Residential Houses"
             :src="`${bgPath}bg-residential-houses.png`"
-            v-animate
-            class=" pt-4 speed-3 a-from-bottom higher"
+            v-animate.40="{ above: true }"
+            class="pt-4 speed-3 a-from-bottom"
           />
         </div>
 
-        <div class="pa-3 text-xs-center">
+        <div
+          v-animate.110="{ above: true }"
+          class="pa-3 text-xs-center speed-5 a-from-bottom lower"
+        >
           <h1 class="display-3 font-weight-bold">84</h1>
           <p class="body-1 text-uppercase">Condominium Units</p>
         </div>
 
-        <div class="pa-3 text-xs-center">
+        <div
+          v-animate.90="{ above: true }"
+          class="pa-3 text-xs-center speed-3 a-from-bottom lower"
+        >
           <h1 class="display-3 font-weight-bold">34</h1>
           <p class="body-1 text-uppercase">Commercial Spaces</p>
         </div>
 
-        <div style="width: 256px">
+        <div
+          style="width: 256px"
+          v-animate.60="{ above: true }"
+          class="speed-5 a-from-bottom lower"
+        >
           <img-hexa
-            :src="`${bgPath}bg-unique-cities.png`"
             title="17"
             text="Unique Cities"
-            v-animate
-            class="speed-3 a-from-bottom"
+            :src="`${bgPath}bg-unique-cities.png`"
           />
         </div>
 
-        <div style="width: 208px;">
+        <div
+          style="width: 208px;"
+          v-animate.90="{ above: true }"
+          class="speed-3 a-from-bottom"
+        >
           <img-hexa
             title="8"
             text="Office Spaces"
             :src="`${bgPath}bg-residential-houses.png`"
-            v-animate
-            class=" speed-3 a-from-bottom higher"
           />
         </div>
       </v-layout>
