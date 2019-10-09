@@ -27,8 +27,8 @@
         class="title text-uppercase primary--text"
       />
       <div
-        class="body-2 pt-3"
-        v-text="desc"
+        v-html="desc"
+        class="body-2 pt-3 text-xs-justify"
       />
     </v-card-text>
   </v-card>

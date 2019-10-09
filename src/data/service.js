@@ -1,18 +1,20 @@
 export default [
   {
-    name: 'Design and Development' ,
-    desc: `Aesthetics, functions and technicality are all compiled together in detailed drawings and specified materials. 
-        These elements are carefully designed and developed to complete the blueprint and the backbone of the project`,
+    name: 'Interior Design' ,
+    desc: `Aesthetic and function are put together in <span class="font-italic">detailed drawings</span> with
+      corresponding <span class="font-italic">material specifications</span>. These elements are carefully developed to
+      complete the interior design blue print of the project.`,
     src: 'icon-design.png'
   },
   {
     name: 'Project Management' ,
-    desc: `Material sourcing, budgetary study, project timeline and construction supervision are core to hassle-free, cost-efficient
-        and timely turnovers. These are all taken cared of by our team for ourn client's peace of mind.`,
+    desc: `A meticulous process that monitors <span class="font-italic">budget</span>
+      and <span class="font-italic">timeline</span>
+      is implemented for cost-efficient and timely turnovers.`,
     src: 'icon-project.png'
   },
   {
-    name: 'Property Management' ,
+    name: 'Home Management',
     desc: 'Coming Soon!',
     src: 'icon-property.png'
   }

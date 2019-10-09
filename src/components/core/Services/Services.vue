@@ -2,7 +2,7 @@
   <div class="white">
     <section-layout
       class="pb-5"
-      title="Services"
+      title="Our Services"
       :hr-line-props="{ width: '57vw' }"
     >
 
