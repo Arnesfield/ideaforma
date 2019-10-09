@@ -29,6 +29,8 @@
               :style="{ height: containerHeight }"
               :src="`${bgPath}/bg-office-section.png`"
               class="pa-3 px-5 text-xs-center white speed-3 a-from-bottom lower"
+              :lazy-src="`${bgPath}/bg-office-section-lazy.png`"
+              aspect-ratio="1"
             />
           </v-flex>
         </v-layout>
