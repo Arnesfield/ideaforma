@@ -58,11 +58,11 @@
 
           <v-flex
             xs12
-            sm10
-            md10
+            sm9
+            md9
             v-animate="{ above: true }"
             class="speed-4 a-from-bottom lower"
-            :style="{ 'background-color': primaryOpac }"
+            :style="{ 'background-color': colorOpac }"
           >
             <v-container
               class="white--text py-5 ma-0"
@@ -71,40 +71,11 @@
                 align-center
                 justify-center
               >
-                <v-btn v-bind="btnProps">
-                  <v-icon
-                    x-large
-                    color="white"
-                  >chevron_left</v-icon>
-                </v-btn>
-
-                <v-spacer/>
-
                 <div>
                   <v-layout justify-end>
-                    <h1 class="display-2">We create homes in the Philippines</h1>
-                  </v-layout>
-
-                  <v-layout>
-                    <v-btn
-                      large
-                      outline
-                      color="white"
-                      class="font-weight-bold mt-3"
-                    >Learn More</v-btn>
-
+                    <h1 class="display-2">Creating homes in the Philippines</h1>
                   </v-layout>
                 </div>
-
-                <v-spacer/>
-
-                <v-btn v-bind="btnProps">
-                  <v-icon
-                    x-large
-                    color="white"
-                  >chevron_right</v-icon>
-                </v-btn>
-
               </v-layout>
 
             </v-container>
@@ -117,6 +88,7 @@
   </div>
 </template>
 <script>
+import { colors } from '@/utils'
 import { bgPath, logoPath } from '@/utils/path'
 import BgPoly from '@/components/utils/BgPoly'
 
@@ -133,8 +105,8 @@ export default {
   computed: {
     bgPath: ()  => bgPath,
     logoPath: () => logoPath,
-    primaryOpac() {
-      const color = this.$vuetify.theme.primary
+    colorOpac() {
+      const color = colors[2] // this.$vuetify.theme.primary
       return `${color}cc`
     },
 
@@ -158,4 +130,3 @@ export default {
   }
 }
 </script>
-
