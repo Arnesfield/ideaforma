@@ -1,12 +1,12 @@
 <template>
   <div class="y-full">
     <header-page/>
+    <our-core/>
     <services/>
     <featured-projects/>
     <!-- TODO: add image separator here -->
     <our-process/>
     <achievements/>
-    <our-core/>
     <app-footer/>
 
     <!-- to top -->

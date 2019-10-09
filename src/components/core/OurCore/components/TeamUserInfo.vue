@@ -19,6 +19,13 @@
         v-text="name"
         class="title text-uppercase primary--text"
       />
+
+      <div
+        v-if="title"
+        v-text="title"
+        class="mt-1 body-1 grey--text text--darken-1"
+      />
+
       <div
         class="body-2 pt-3"
         v-text="description"
@@ -36,6 +43,11 @@ export default {
     name: {
       type: String,
       required: true
+    },
+    title: {
+      type: String,
+      default: '',
+      required: false
     },
     description: {
       type: String,

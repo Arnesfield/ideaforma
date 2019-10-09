@@ -16,10 +16,13 @@
           wrap
           class=" text-md-center text-sm-center text-xs-center"
         >
+          <!-- sizing is static! -->
           <v-flex
             xs12
-            sm4
-            md4
+            :sm2="i != 2"
+            :md2="i != 2"
+            :sm4="i == 2"
+            :md4="i == 2"
             :key="i"
             v-for="(user, i) in team"
             class="pt-4 white--text"
@@ -66,13 +69,13 @@ export default {
     SectionLayout
   },
 
-  data: () => ({
-    team
-  }),
-
   computed: {
     small() {
       return this.$vuetify.breakpoint.xsOnly
+    },
+    team() {
+      // only use first 5
+      return team.slice(0, 5)
     }
   }
 }
