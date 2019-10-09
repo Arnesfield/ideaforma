@@ -8,12 +8,13 @@
     <v-layout
       row
       wrap
+      justify-center
       v-animate="animate"
       color="transparent"
       class="pa-3 pb-4"
     >
       <!-- Social Media icons -->
-      <v-flex
+      <!-- <v-flex
         xs12
         md4
         class="text-md-center text-sm-center text-xs-center pt-4"
@@ -37,7 +38,7 @@
             class="color-footer"
           >{{ social.icon }}</v-icon>
         </v-btn>
-      </v-flex>
+      </v-flex> -->
 
       <!-- Contact Us -->
       <v-flex
@@ -51,7 +52,7 @@
         <div
           col
           wrap
-          class="body-2 grey--text"
+          class="body-2 grey--text mb-2"
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Nullam consectetur auctor odio, nec tempor mi placerat at.
@@ -59,28 +60,45 @@
             Praesent vitae nulla venenatis, interdum metus nec, placerat magna.
           </p>
         </div>
-        <div
-          col
+
+        <v-layout
           wrap
-          class="body-2 pt-2 grey--text"
+          class="px-2 body-2 pt-2 grey--text"
         >
-          <v-icon
-            class="pr-2"
-            color="white"
-          >far fa-envelope</v-icon>
-          info@ideaforma.com.ph
-        </div>
-        <div
-          col
+          <div>
+            <v-icon
+              class="pr-2"
+              color="white"
+            >fas fa-home</v-icon>
+          </div>
+          <div>Unit 235 Cityflex Towers, Tower 1, 7th Avenue corner Lane T,<br/>Bonifacio Global City, Taguig City</div>
+        </v-layout>
+
+        <v-layout
           wrap
-          class="body-2 pt-3 grey--text"
+          class="px-2 body-2 pt-2 grey--text"
         >
-          <v-icon
-            class=" pr-3 light"
-            color="white"
-          >fas fa-mobile-alt</v-icon>
-          (+63) 123 45 67
-        </div>
+          <div>
+            <v-icon
+              class="pr-2"
+              color="white"
+            >far fa-envelope</v-icon>
+          </div>
+          <div>jobs@ideaforma.com.ph</div>
+        </v-layout>
+
+        <v-layout
+          wrap
+          class="px-2 body-2 pt-3 grey--text"
+        >
+          <div>
+            <v-icon
+              class=" pr-3 light"
+              color="white"
+            >fas fa-mobile-alt</v-icon>
+          </div>
+          <div>9466011 / 0917 170 6563</div>
+        </v-layout>
       </v-flex>
 
       <!-- Careers -->
@@ -112,7 +130,7 @@
         >
           <p>
             Send your resume and cover letter to<br/>
-            info@ideaforma.com.ph
+            jobs@ideaforma.com.ph
           </p>
         </div>
       </v-flex>
