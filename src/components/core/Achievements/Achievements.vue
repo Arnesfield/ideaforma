@@ -17,17 +17,16 @@
         align-center
         justify-center 
       >
-        <div
-          style="width: 256px"
-          v-animate.180="{ above: true }"
-          class="speed-5 a-from-bottom lower"
+        <div 
+          v-animate.120="{ above: true }"
+          class="pa-3 text-xs-center speed-5 a-from-bottom lower"
         >
-          <img-hexa
-            title="11"
-            class="mx-auto pt-4"
-            text="Years in Business"
-            :src="`${bgPath}bg-years-in-business.png`"
-          />
+          <h1
+            style="font-size: 92px !important"
+            class="display-3 font-weight-bold"
+          >11</h1>
+          <p class="body-1 text-uppercase">Years in Business</p>
+          <!-- Terabytes of Data -->
         </div>
 
         <div
@@ -36,16 +35,37 @@
           class="pa-3 px-5 text-xs-center white speed-4 a-from-bottom"
         >
           <h1 class="display-3 font-weight-bold">23K</h1>
-          <p class="body-1 text-uppercase"> sqm turned over</p>
+          <p class="body-1 text-uppercase">SQMs Turned Over</p>
         </div>
 
-        <div 
-          v-animate.120="{ above: true }"
-          class="pa-3 text-xs-center speed-5 a-from-bottom lower"
+        <div
+          style="width: 256px"
+          v-animate.180="{ above: true }"
+          class="speed-5 a-from-bottom lower"
         >
-          <h1 class="display-3 font-weight-bold">2.2</h1>
-          <p class="body-1 text-uppercase">Terabytes of Data</p>
+          <img-hexa
+            title="313"
+            class="mx-auto pt-4"
+            text="Skilled Workers Employed"
+            :src="`${bgPath}bg-years-in-business.png`"
+            :text-props="{
+              class: 'white px-2 py-1'
+            }"
+            :title-props="{
+              style: 'margin-top: -32px'
+            }"
+          />
         </div>
+
+        <div
+          v-animate.40="{ above: true }"
+          style="border: 1.5px solid #ccc !important"
+          class="pa-3 px-5 text-xs-center white speed-4 a-from-bottom"
+        >
+          <h1 class="display-3 font-weight-bold">414,000</h1>
+          <p class="body-1 text-uppercase">Color Palettes Chosen</p>
+        </div>
+
       </v-layout>
 
       <!-- Second Row -->
@@ -60,18 +80,13 @@
           <img-hexa
             title="54"
             text="Residential Houses"
+            :title-props="{
+              style: 'font-size: 92px !important; margin-top: -32px'
+            }"
             :src="`${bgPath}bg-residential-houses.png`"
             v-animate.40="{ above: true }"
             class="pt-4 speed-3 a-from-bottom"
           />
-        </div>
-
-        <div
-          v-animate.110="{ above: true }"
-          class="pa-3 text-xs-center speed-5 a-from-bottom lower"
-        >
-          <h1 class="display-3 font-weight-bold">84</h1>
-          <p class="body-1 text-uppercase">Condominium Units</p>
         </div>
 
         <div
@@ -80,6 +95,17 @@
         >
           <h1 class="display-3 font-weight-bold">34</h1>
           <p class="body-1 text-uppercase">Commercial Spaces</p>
+        </div>
+
+        <div
+          v-animate.110="{ above: true }"
+          class="pa-3 text-xs-center speed-5 a-from-bottom lower"
+        >
+          <h1
+            style="font-size: 92px !important"
+            class="display-3 font-weight-bold"
+          >84</h1>
+          <p class="body-1 text-uppercase">Condominium Units</p>
         </div>
 
         <div

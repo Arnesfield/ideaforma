@@ -12,10 +12,12 @@
       >
         <h1
           v-text="title"
+          v-bind="titleProps"
           class="display-3 font-weight-bold"
         />
         <p
           v-text="text"
+          v-bind="textProps"
           class="body-1 text-uppercase"
         />
       
@@ -39,6 +41,16 @@ export default {
     text: {
       type: String,
       required: true
+    },
+    titleProps: {
+      type: Object,
+      default: null,
+      required: false
+    },
+    textProps: {
+      type: Object,
+      default: null,
+      required: false
     }
   }
 }
