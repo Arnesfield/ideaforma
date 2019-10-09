@@ -6,6 +6,7 @@
   >
     <v-img
       v-bind="imgProps"
+      :lazy-src="cLazyImg"
       :src="`${bgPath}${img}`"
       :style="{ opacity, width: imgWidth }"
     />
@@ -26,6 +27,11 @@ export default {
     img: {
       type: String,
       required: true
+    },
+    lazyImg: {
+      type: String,
+      default: '',
+      required: false
     },
     opacity: {
       type: [Number, String],
@@ -50,6 +56,10 @@ export default {
           return '50vw'
         default: return '30vw'
       }
+    },
+
+    cLazyImg() {
+      return this.lazyImg ? `${this.bgPath}${this.lazyImg}` : null
     }
   }
 }

@@ -8,7 +8,7 @@
       opacity="0.5"
       slot="outside"
       img="bg-gold-poly.png"
-      :lazy-img="bg-gold-poly-lazy.png"
+      lazy-img="bg-gold-poly-lazy.png"
       aspect-ratio="1"
     />
 
