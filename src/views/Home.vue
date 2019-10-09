@@ -10,7 +10,7 @@
     <app-footer/>
 
     <!-- to top -->
-    <v-btn
+    <!-- <v-btn
       fab
       icon
       fixed
@@ -21,7 +21,7 @@
       class="mr-1 mb-1 elevation-4"
     >
       <v-icon>keyboard_arrow_up</v-icon>
-    </v-btn>
+    </v-btn> -->
   </div>
 </template>
 
