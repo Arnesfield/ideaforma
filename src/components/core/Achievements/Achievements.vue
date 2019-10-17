@@ -15,14 +15,14 @@
         ma-0
         wrap
         align-center
-        justify-center 
+        justify-center
       >
         <div 
           v-animate.120="{ above: true }"
           class="pa-3 text-xs-center speed-5 a-from-bottom lower"
         >
           <h1
-            style="font-size: 92px !important"
+            :style="bigFont"
             class="display-3 font-weight-bold"
           >11</h1>
           <p class="body-1 text-uppercase">Years in Business</p>
@@ -34,7 +34,7 @@
           style="border: 1.5px solid #ccc !important"
           class="pa-3 px-5 text-xs-center white speed-4 a-from-bottom"
         >
-          <h1 class="display-3 font-weight-bold">23K</h1>
+          <h1 class="display-3 font-weight-bold">14,004</h1>
           <p class="body-1 text-uppercase">SQMs Turned Over</p>
         </div>
 
@@ -59,6 +59,14 @@
 
         <div
           v-animate.40="{ above: true }"
+          class="pa-3 text-xs-center speed-3 a-from-bottom lower"
+        >
+          <h1 class="display-3 font-weight-bold">13</h1>
+          <p class="body-1 text-uppercase">Restaurants</p>
+        </div>
+
+        <div
+          v-animate.40="{ above: true }"
           style="border: 1.5px solid #ccc !important"
           class="pa-3 px-5 text-xs-center white speed-4 a-from-bottom"
         >
@@ -74,14 +82,15 @@
         row
         ma-0
         wrap
-        justify-center 
+        justify-center
+        :style="!small ? 'transform: translateY(-40px)' : null"
       >
         <div style="width: 208px">
           <img-hexa
-            title="54"
-            text="Residential Houses"
+            title="94"
+            text="Houses"
             :title-props="{
-              style: 'font-size: 92px !important; margin-top: -32px'
+              style: `${bigFont}; margin-top: -32px`
             }"
             :src="`${bgPath}bg-residential-houses.png`"
             v-animate.40="{ above: true }"
@@ -102,9 +111,9 @@
           class="pa-3 text-xs-center speed-5 a-from-bottom lower"
         >
           <h1
-            style="font-size: 92px !important"
+            :style="bigFont"
             class="display-3 font-weight-bold"
-          >84</h1>
+          >134</h1>
           <p class="body-1 text-uppercase">Condominium Units</p>
         </div>
 
@@ -114,9 +123,12 @@
           class="speed-5 a-from-bottom lower"
         >
           <img-hexa
-            title="17"
-            text="Unique Cities"
+            title="25"
+            text="Office Spaces"
             :src="`${bgPath}bg-unique-cities.png`"
+            :text-props="{
+              class: 'white px-2 py-1'
+            }"
           />
         </div>
 
@@ -126,11 +138,20 @@
           class="speed-3 a-from-bottom"
         >
           <img-hexa
-            title="8"
-            text="Office Spaces"
+            title="26"
+            text="Retail Stores"
             :src="`${bgPath}bg-residential-houses.png`"
           />
         </div>
+
+        <div
+          v-animate.70="{ above: true }"
+          class="pa-3 text-xs-center speed-3 a-from-bottom lower"
+        >
+          <h1 class="display-3 font-weight-bold">2</h1>
+          <p class="body-1 text-uppercase">Schools</p>
+        </div>
+
       </v-layout>
       
     </v-container>
@@ -150,7 +171,15 @@ export default {
   },
 
   computed: {
-    bgPath: () => bgPath
+    bgPath: () => bgPath,
+
+    small() {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+
+    bigFont() {
+      return 'font-size: 102px !important; font-weight: bolder'
+    }
   }
 }
 </script>
