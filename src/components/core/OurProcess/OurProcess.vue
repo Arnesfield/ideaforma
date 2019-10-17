@@ -63,7 +63,7 @@
             <process-item
               :key="i"
               v-bind="item"
-              v-animate.60="{ above: true }"
+              v-animate.45="{ above: true }"
               v-for="(item, i) in rightItems"
               class="mx-auto a-from-bottom lower"
               :class="{
