@@ -14,20 +14,21 @@
         <v-layout
           row
           wrap
-          class=" text-md-center text-sm-center text-xs-center"
+          :key="i"
+          v-for="(layout, i) in layouts"
+          justify-center
+          class="text-md-center text-sm-center text-xs-center"
         >
-          <!-- sizing is static! -->
           <v-flex
             xs12
-            :sm2="i != 2"
-            :md2="i != 2"
-            :sm4="i == 2"
-            :md4="i == 2"
+            sm4
+            md4
             :key="i"
-            v-for="(user, i) in team"
+            v-bind="layout.flexProps"
             class="pt-4 white--text"
-            :class="{ 'mt-5': !small && (i == 0 || i == team.length - 1) }"
+            v-for="(user, i) in layout.team"
           >
+            <!-- :class="{ 'mt-5': !small && (i == 0 || i == team.length - 1) }" -->
             <team-user-info v-bind="user"/>
           </v-flex>
         </v-layout>
@@ -76,6 +77,17 @@ export default {
     team() {
       // only use first 5
       return team.slice(0, 5)
+    },
+
+    layouts() {
+      return [
+        {
+          team: this.team.slice(0, 2)
+        },
+        {
+          team: this.team.slice(2)
+        }
+      ]
     }
   }
 }
