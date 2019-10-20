@@ -89,12 +89,16 @@
           <img-hexa
             title="94"
             text="Houses"
-            :title-props="{
-              style: `${bigFont}; margin-top: -32px`
-            }"
-            :src="`${bgPath}bg-residential-houses.png`"
+            :src="`${bgPath}bg-houses.png`"
             v-animate.40="{ above: true }"
             class="pt-4 speed-3 a-from-bottom"
+            :title-props="{
+              class: 'white--text',
+              style: `${bigFont}; margin-top: -32px; text-shadow: 3px 4px #000000`
+            }"
+            :text-props="{
+              class: 'white px-2 py-1'
+            }"
           />
         </div>
 
@@ -125,7 +129,7 @@
           <img-hexa
             title="25"
             text="Office Spaces"
-            :src="`${bgPath}bg-unique-cities.png`"
+            :src="`${bgPath}bg-unique-cities-old.png`"
             :text-props="{
               class: 'white px-2 py-1'
             }"
@@ -178,7 +182,7 @@ export default {
     },
 
     bigFont() {
-      return 'font-size: 102px !important; font-weight: bolder'
+      return 'font-size: 106px !important; font-weight: bolder'
     }
   }
 }
