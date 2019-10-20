@@ -15,8 +15,8 @@
           row
           wrap
           :key="i"
-          v-for="(layout, i) in layouts"
           justify-center
+          v-for="(layout, i) in layouts"
           class="text-md-center text-sm-center text-xs-center"
         >
           <v-flex
