@@ -1,5 +1,5 @@
 const Home = () => import(/* webpackChunkName: "home" */ '@/views/Home')
-const About = () => import(/* webpackChunkName: "about" */ '@/views/About')
+const Team = () => import(/* webpackChunkName: "team" */ '@/views/Team')
 
 const routes = [
   {
@@ -11,12 +11,17 @@ const routes = [
     }
   },
   {
-    path: '/about',
-    name: 'about',
-    component: About,
+    path: '/team',
+    name: 'team',
+    component: Team,
     meta: {
-      title: 'About'
+      title: 'Meet the Team'
     }
+  },
+
+  {
+    path: '*',
+    redirect: '/'
   }
 ]
 

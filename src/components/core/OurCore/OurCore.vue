@@ -44,6 +44,7 @@
             <v-btn
               flat
               large
+              to="/team"
               class="font-italic"
               color="grey darken-1"
             >
@@ -60,8 +61,8 @@
 
 <script>
 import { team } from '@/data'
-import TeamUserInfo from './components/TeamUserInfo'
 import SectionLayout from '@/layouts/SectionLayout'
+import TeamUserInfo from './components/TeamUserInfo'
 
 export default {
   name: 'our-core',
