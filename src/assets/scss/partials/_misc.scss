@@ -6,6 +6,10 @@
   position: absolute;
 }
 
+.smooth-corners {
+  border-radius: 8px !important;
+}
+
 // width and height
 $wh: 32 48 64 128;
 

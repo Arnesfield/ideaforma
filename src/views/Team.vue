@@ -1,6 +1,8 @@
 <template>
   <div class="about">
     <div class="white">
+      <app-toolbar to="/?to=core"/>
+
       <section-layout
         class="pb-5"
         title="Meet the Team"
@@ -20,8 +22,10 @@
           >
             <v-flex
               xs12
-              sm3
-              md3
+              v-bind="{
+                'sm4 md4': user.emphasize,
+                'sm3 md3': !user.emphasize
+              }"
               :key="i"
               class="pt-4 white--text"
               v-for="(user, i) in team"
@@ -41,12 +45,14 @@
 import { team } from '@/data'
 import AppFooter from '@/components/core/AppFooter'
 import SectionLayout from '@/layouts/SectionLayout'
+import AppToolbar from '@/components/core/AppToolbar'
 import TeamUserInfo from '@/components/core/OurCore/components/TeamUserInfo'
 
 export default {
   name: 'team',
   components: {
     AppFooter,
+    AppToolbar,
     TeamUserInfo,
     SectionLayout
   },
@@ -54,7 +60,8 @@ export default {
     small() {
       return this.$vuetify.breakpoint.xsOnly
     },
-    team: () => team
+    // remove slice if they need everybody
+    team: () => team.slice(5)
   }
 }
 </script>

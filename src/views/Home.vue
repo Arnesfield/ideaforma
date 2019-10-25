@@ -2,7 +2,7 @@
   <div class="y-full">
     <header-page/>
     <achievements/>
-    <our-core/>
+    <our-core id="core"/>
     <services/>
     <featured-projects/>
     <!-- TODO: add image separator here -->
@@ -45,14 +45,34 @@ export default {
     Achievements,
     FeaturedProjects
   },
-  
+
+  computed: {
+    goTo() {
+      const { to } = this.$route.query || {}
+      return to
+    },
+
+    gotoProps: () => ({
+      duration: 1000,
+      offset: 0,
+      easing: 'easeInOutCubic'
+    })
+  },
+
+  mounted() {
+    if (this.goTo) {
+      this.$nextTick(() => {
+        this.$vuetify.goTo(`#${this.goTo}`, this.gotoProps)
+
+        // remove the routes query
+        this.$router.replace('')
+      })
+    }
+  },
+
   methods: {
     toTop() {
-      this.$vuetify.goTo('#app', {
-        duration: 1000,
-        offset: 0,
-        easing: 'easeInOutCubic'
-      })
+      this.$vuetify.goTo('#app', this.gotoProps)
     }
   }
 }

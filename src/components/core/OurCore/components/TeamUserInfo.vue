@@ -1,5 +1,13 @@
 <template>
-  <v-card flat>
+  <v-card
+    flat
+    v-bind="cardProps"
+    class="smooth-corners"
+    style="overflow: hidden"
+    :style="!emphasize ? null : {
+      'background-color': `${color}14`
+    }"
+  >
     <v-card-title
       primary
       class="title justify-center"
@@ -17,8 +25,15 @@
     >
       <div
         v-text="name"
-        class="title text-uppercase primary--text"
+        class="text-uppercase primary--text"
+        :class="{
+          title: !emphasize,
+          'font-weight-bold display-1': emphasize
+        }"
       />
+        <!-- :style="!emphasize ? null : {
+          'font-size': '28px !important'
+        }" -->
 
       <div
         v-if="title"
@@ -35,6 +50,7 @@
 </template>
 
 <script>
+import { colors } from '@/utils'
 import { teamPath } from '@/utils/path'
 
 export default {
@@ -56,11 +72,26 @@ export default {
     src: {
       type: String,
       required: true
+    },
+    emphasize: {
+      type: Boolean,
+      default: false,
+      required: false
     }
   },
 
   computed: {
-    teamPath: () => teamPath
+    color: () => colors[2],
+    teamPath: () => teamPath,
+
+    // just leave this here
+    cardProps() {
+      return !this.emphasize ? null : {
+        style: {
+          // border: `1px solid ${this.color}`
+        }
+      }
+    }
   }
 }
 </script>
