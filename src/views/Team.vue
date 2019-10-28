@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="white">
-      <app-toolbar to="/?to=core"/>
+      <app-toolbar :to="toPath"/>
 
       <section-layout
-        class="pb-5"
+        class="pb-3"
         title="Meet the Team"
         :hr-line-props="{ width: '62vw' }"
       >
@@ -35,6 +35,22 @@
           </v-layout>
         </v-container>
       </section-layout>
+
+      <v-layout
+        class="pb-5"
+        justify-center
+      >
+        <v-btn
+          large
+          outline
+          :to="toPath"
+          class="title"
+          style="height: 56px"
+        >
+          <v-icon class="mr-1">arrow_left</v-icon>
+          <span>Back to Our Core</span>
+        </v-btn>
+      </v-layout>
     </div>
 
     <app-footer/>
@@ -57,6 +73,7 @@ export default {
     SectionLayout
   },
   computed: {
+    toPath: () => '/?to=core',
     small() {
       return this.$vuetify.breakpoint.xsOnly
     },
