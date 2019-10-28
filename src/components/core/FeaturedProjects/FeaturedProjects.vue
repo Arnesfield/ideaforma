@@ -16,15 +16,54 @@
       class="speed-3 a-from-bottom"
       v-animate.100="{ above: true }"
     >
-      <carousel v-bind="{ items }">
-        <div slot-scope="{ item, index }">
-          <!-- TODO: update content -->
-          {{ index }}
+      <carousel
+        class="mb-5"
+        height="520px"
+        v-bind="{ items }"
+      >
+        <div
+          :key="index"
+          slot-scope="{ item, index }"
+          style="height: inherit;"
+        >
+          <v-layout
+            justify-center
+            style="height: inherit;"
+          >
+            <v-img
+              contain
+              style="height: inherit;"
+              :src="`${galleryPath}/${item.imgSrc}`"
+            >
+              <v-layout
+                align-end
+                justify-end
+                fill-height
+                class="pr-3"
+              >
+                <v-btn
+                  dark
+                  flat
+                  large
+                  :to="item.to"
+                  class="headline"
+                  style="height: 52px; background-color: rgba(0,0,0,0.5)"
+                >
+                  <span
+                    v-text="item.title"
+                    style="letter-spacing: 0.28em"
+                  />
+                  <v-icon>arrow_right</v-icon>
+                </v-btn>
+              </v-layout>
+            </v-img>
+
+          </v-layout>
         </div>
       </carousel>
 
       <!-- button below -->
-      <v-layout>
+      <!-- <v-layout class="mt-2">
         <v-spacer/>
         <v-btn
           flat
@@ -35,13 +74,14 @@
           View All
           <v-icon>chevron_right</v-icon>
         </v-btn>
-      </v-layout>
+      </v-layout> -->
     </v-container>
   </section-layout>
 </template>
 
 <script>
 import { featuredProjects } from '@/data'
+import { galleryPath } from '@/utils/path'
 import BgPoly from '@/components/utils/BgPoly'
 import Carousel from '@/components/utils/Carousel'
 import SectionLayout from '@/layouts/SectionLayout'
@@ -54,8 +94,9 @@ export default {
     SectionLayout
   },
 
-  data: () => ({
-    items: featuredProjects
-  })
+  computed: {
+    galleryPath: () => galleryPath,
+    items: () => featuredProjects
+  }
 }
 </script>

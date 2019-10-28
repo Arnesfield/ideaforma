@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div>
     <div class="white">
       <app-toolbar to="/?to=core"/>
 

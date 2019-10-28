@@ -4,7 +4,7 @@
     <achievements/>
     <our-core id="core"/>
     <services/>
-    <featured-projects/>
+    <featured-projects id="projects"/>
     <!-- TODO: add image separator here -->
     <our-process/>
     <app-footer/>

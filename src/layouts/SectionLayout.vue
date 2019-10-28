@@ -20,6 +20,8 @@
         />
       </div>
 
+      <slot name="subtitle"/>
+
       <div>
         <hr-line
           v-bind="hrLineProps"

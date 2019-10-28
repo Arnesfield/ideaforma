@@ -9,7 +9,7 @@
     >
       <v-btn
         v-bind="btnProps"
-        @click="value++"
+        @click="() => { value === 0 ? value = items.length - 1 : value-- }"
       >
         <v-icon :size="mControlSize">chevron_left</v-icon>
       </v-btn>
@@ -17,7 +17,7 @@
       <!-- window start -->
 
       <v-window
-        class="x-full -b"
+        class="x-full"
         v-model="value"
         :style="{ height }"
       >
