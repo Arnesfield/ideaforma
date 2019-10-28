@@ -31,7 +31,7 @@
           'font-weight-bold display-1': emphasize
         }"
       />
-        <!-- :style="!emphasize ? null : {
+      <!-- :style="!emphasize ? null : {
           'font-size': '28px !important'
         }" -->
 

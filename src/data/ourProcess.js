@@ -29,7 +29,7 @@ export default [
   {
     number: 4,
     title: 'Aim',
-    text: "Considering both budget and timeline, we set clear cut goals. We pride ourselves with the most efficient monitoring and project management experience in interior design & construction making the experience as delightful as possible.",
+    text: 'Considering both budget and timeline, we set clear cut goals. We pride ourselves with the most efficient monitoring and project management experience in interior design & construction making the experience as delightful as possible.',
     // props
     titlePos: 'left',
     titleClass: 'text-xs-center text-sm-left text-md-left',
@@ -38,7 +38,7 @@ export default [
   {
     number: 5,
     title: 'Build',
-    text: "Turning the vision to reality, we start building the space. As the one of the most critical phases in the process, we will keep you updated on all the accomplishments and promise the most creative solutions in times that bridging the vision and reality may become a challenge.",
+    text: 'Turning the vision to reality, we start building the space. As the one of the most critical phases in the process, we will keep you updated on all the accomplishments and promise the most creative solutions in times that bridging the vision and reality may become a challenge.',
     // props
     titlePos: 'left',
     titleClass: 'text-xs-center text-sm-left text-md-left',
