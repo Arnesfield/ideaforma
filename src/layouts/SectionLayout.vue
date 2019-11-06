@@ -1,6 +1,5 @@
 <template>
   <v-container
-    fluid
     class="pa-0 relative"
     v-bind="containerProps"
   >
@@ -8,30 +7,37 @@
 
     <v-layout column>
       <div class="pa-3">
-        <h1
-          v-text="title"
-          v-animate="{ above: true }"
-          class="mt-5 primary--text text-xs-center speed-2 a-from-bottom"
-          :class="{
-            'display-1': $vuetify.breakpoint.xsOnly,
-            'display-2': $vuetify.breakpoint.smOnly,
-            'display-3': !$vuetify.breakpoint.smAndDown,
-          }"
-        />
+        <v-container
+          class="pa-0"
+          :class="{ 'px-3': !!(containerProps || {}).fluid }"
+        >
+          <h1
+            v-text="title"
+            v-animate="{ above: true }"
+            class="mt-5 primary--text speed-2 a-from-bottom text-uppercase"
+            :class="{
+              ...cTitleClass,
+              'display-1': $vuetify.breakpoint.xsOnly,
+              'display-2': $vuetify.breakpoint.smOnly,
+              'display-3': !$vuetify.breakpoint.smAndDown,
+            }"
+          />
+        </v-container>
       </div>
 
       <slot name="subtitle"/>
 
-      <div>
+      <!-- <div>
         <hr-line
           v-bind="hrLineProps"
           class="speed-3 a-from-bottom"
           v-animate="{ above: true }"
         />
-      </div>
+      </div> -->
 
       <slot/>
     </v-layout>
+
   </v-container>
 </template>
 
@@ -49,6 +55,11 @@ export default {
       type: String,
       required: true
     },
+    titleClass: {
+      type: [String, Object],
+      default: null,
+      required: false
+    },
     containerProps: {
       type: Object,
       required: false,
@@ -62,7 +73,11 @@ export default {
   },
 
   computed: {
-    bgPath: () => bgPath
+    bgPath: () => bgPath,
+    cTitleClass() {
+      const { titleClass: c } = this
+      return typeof c === 'string' ? { [c]: true } : c
+    }
   }
 }
 </script>

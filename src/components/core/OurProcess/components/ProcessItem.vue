@@ -27,7 +27,7 @@
     >
       <div
         v-html="text"
-        class="text--secondary"
+        class="text--secondary text-xs-justify caption"
       />
     </v-card-text>
   </v-card>

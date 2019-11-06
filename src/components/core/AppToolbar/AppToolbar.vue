@@ -12,13 +12,23 @@
       <v-icon>arrow_back</v-icon>
     </v-btn>
 
-    <v-toolbar-title>ideaforma</v-toolbar-title>
+    <v-toolbar-title>
+      <div style="width: 140px">
+        <app-logo no-animate/>
+      </div>
+    </v-toolbar-title>
   </v-toolbar>
 </template>
 
 <script>
+import AppLogo from '@/components/core/AppLogo'
+
 export default {
   name: 'app-toolbar',
+  components: {
+    AppLogo
+  },
+
   props: {
     to: {
       type: String,

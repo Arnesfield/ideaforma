@@ -32,39 +32,39 @@ export default [
   {
     name: 'Debbie Ramos',
     title: 'Operations Supervisor',
-    description: 'Dolor pariatur magna eu culpa quis commodo anim pariatur eu exercitation exercitation fugiat et. Exercitation qui ex ullamco in.',
+    // description: 'Dolor pariatur magna eu culpa quis commodo anim pariatur eu exercitation exercitation fugiat et. Exercitation qui ex ullamco in.',
     src: 'Debbie Ramos.png',
     emphasize: true
   },
   {
     name: 'Mike Umbao',
     title: 'Administrative Staff',
-    description: 'Ipsum sunt veniam ex et nulla officia consequat mollit excepteur. Nostrud magna elit excepteur ipsum. Sit fugiat anim aliquip laboris magna officia consectetur eiusmod ex minim id.',
+    // description: 'Ipsum sunt veniam ex et nulla officia consequat mollit excepteur. Nostrud magna elit excepteur ipsum. Sit fugiat anim aliquip laboris magna officia consectetur eiusmod ex minim id.',
     src: 'Mike Umbao.png'
   },
   {
     name: 'Rachel Tanada',
     title: 'Sr. Design Associate',
-    description: 'Est excepteur sit sunt voluptate culpa aute magna veniam culpa consectetur. Eiusmod elit irure adipisicing dolor id deserunt commodo enim quis reprehenderit non sunt laborum.',
+    // description: 'Est excepteur sit sunt voluptate culpa aute magna veniam culpa consectetur. Eiusmod elit irure adipisicing dolor id deserunt commodo enim quis reprehenderit non sunt laborum.',
     src: 'Rachel Tanada.png',
     emphasize: true
   },
   {
     name: 'Angelica Jaurigue',
     title: 'Jr. Interior Designer',
-    description: 'Qui sit velit fugiat voluptate reprehenderit nostrud laborum enim sint ipsum cupidatat. Enim dolor mollit nisi aliqua.',
+    // description: 'Qui sit velit fugiat voluptate reprehenderit nostrud laborum enim sint ipsum cupidatat. Enim dolor mollit nisi aliqua.',
     src: 'Angelica Jaurigue.png'
   },
   {
     name: 'Reneca Abuso',
     title: 'Jr. Interior Designer',
-    description: 'Aliquip qui officia excepteur est minim aute magna ut anim ex anim non. Tempor velit do consequat Lorem irure minim consectetur exercitation tempor consequat ut sunt Lorem ex.',
+    // description: 'Aliquip qui officia excepteur est minim aute magna ut anim ex anim non. Tempor velit do consequat Lorem irure minim consectetur exercitation tempor consequat ut sunt Lorem ex.',
     src: 'Reneca Abuso.png'
   },
   {
     name: 'Ally Asprec',
     title: 'Technical Designer',
-    description: 'Laboris dolore laborum incididunt aliqua amet velit non esse cillum. Aliqua veniam est culpa pariatur proident consequat ullamco tempor ut labore voluptate.',
+    // description: 'Laboris dolore laborum incididunt aliqua amet velit non esse cillum. Aliqua veniam est culpa pariatur proident consequat ullamco tempor ut labore voluptate.',
     src: 'Ally Asprec.png'
   }
 ]

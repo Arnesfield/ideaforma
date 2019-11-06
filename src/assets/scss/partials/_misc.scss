@@ -10,6 +10,29 @@
   border-radius: 8px !important;
 }
 
+.double-border {
+  border-style: solid;
+  border-color: #DEB817CC;
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+  border-left-width: 8px;
+  border-right-width: 8px;
+  position: relative;
+}
+
+.double-border:before {
+  background: none;
+  border: 4px solid white;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  pointer-events: none;
+}
+
 // width and height
 $wh: 32 48 64 128;
 

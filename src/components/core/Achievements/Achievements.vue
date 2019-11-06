@@ -4,6 +4,28 @@
       grid-list-lg
       class="relative"
     >
+
+      <v-layout
+        row
+        class="pb-4"
+        align-center
+      >
+        <v-flex xs5 sm3 style="transform: translateY(18px)">
+          <app-logo/>
+        </v-flex>
+
+        <h1
+          v-text="'in Numbers'"
+          v-animate="{ above: true }"
+          class="mt-5 primary--text speed-2 a-from-bottom text-uppercase"
+          :class="{
+            'display-1': $vuetify.breakpoint.xsOnly,
+            'display-2': $vuetify.breakpoint.smOnly,
+            'display-3': !$vuetify.breakpoint.smAndDown,
+          }"
+        />
+      </v-layout>
+
       <bg-poly
         opacity="0.65"
         style="right: 0"
@@ -29,17 +51,17 @@
           <!-- Terabytes of Data -->
         </div>
 
+        <!-- style="border: 1.5px solid #ccc !important" -->
         <div
           v-animate.40="{ above: true }"
-          style="border: 1.5px solid #ccc !important"
-          class="pa-3 px-5 text-xs-center white speed-4 a-from-bottom"
+          class="pa-3 text-xs-center speed-4 a-from-bottom"
         >
           <h1 class="display-3 font-weight-bold">14,004</h1>
           <p class="body-1 text-uppercase">SQMs Turned Over</p>
         </div>
 
         <div
-          style="width: 256px"
+          style="width: 208px"
           v-animate.180="{ above: true }"
           class="speed-5 a-from-bottom lower"
         >
@@ -67,8 +89,16 @@
 
         <div
           v-animate.40="{ above: true }"
-          style="border: 1.5px solid #ccc !important"
-          class="pa-3 px-5 text-xs-center white speed-4 a-from-bottom"
+          class="pa-3 text-xs-center speed-3 a-from-bottom lower"
+        >
+          <h1 class="display-3 font-weight-bold">2</h1>
+          <p class="body-1 text-uppercase">Schools</p>
+        </div>
+
+        <!-- style="border: 1.5px solid #ccc !important" -->
+        <div
+          v-animate.40="{ above: true }"
+          class="pa-3 text-xs-center speed-4 a-from-bottom"
         >
           <h1 class="display-3 font-weight-bold">414,000</h1>
           <p class="body-1 text-uppercase">Color Palettes Chosen</p>
@@ -83,9 +113,10 @@
         ma-0
         wrap
         justify-center
-        :style="!small ? 'transform: translateY(-40px)' : null"
+        class="pb-4"
       >
-        <div style="width: 208px">
+        <!-- :style="!small ? 'transform: translateY(-40px)' : null" -->
+        <div style="width: 224px">
           <img-hexa
             title="94"
             text="Houses"
@@ -103,32 +134,42 @@
         </div>
 
         <div
-          v-animate.90="{ above: true }"
-          class="pa-3 text-xs-center speed-3 a-from-bottom lower"
-        >
-          <h1 class="display-3 font-weight-bold">34</h1>
-          <p class="body-1 text-uppercase">Commercial Spaces</p>
-        </div>
-
-        <div
           v-animate.110="{ above: true }"
           class="pa-3 text-xs-center speed-5 a-from-bottom lower"
         >
           <h1
-            :style="bigFont"
             class="display-3 font-weight-bold"
-          >134</h1>
-          <p class="body-1 text-uppercase">Condominium Units</p>
+          >25</h1>
+          <p class="body-1 text-uppercase">Office Spaces</p>
         </div>
 
         <div
-          style="width: 256px"
+          style="width: 280px"
           v-animate.60="{ above: true }"
           class="speed-5 a-from-bottom lower"
         >
           <img-hexa
-            title="25"
-            text="Office Spaces"
+            title="134"
+            text="Condominium Units"
+            :src="`${bgPath}bg-unique-cities.png`"
+            :text-props="{
+              class: 'white px-2 py-1'
+            }"
+            :title-props="{
+              class: 'white--text',
+              style: `${bigFont}; margin-top: -32px; text-shadow: 3px 4px #000000`
+            }"
+          />
+        </div>
+
+        <div
+          style="width: 204px"
+          v-animate.60="{ above: true }"
+          class="speed-5 a-from-bottom lower"
+        >
+          <img-hexa
+            title="34"
+            text="Commercial Spaces"
             :src="`${bgPath}bg-unique-cities-old.png`"
             :text-props="{
               class: 'white px-2 py-1'
@@ -148,14 +189,6 @@
           />
         </div>
 
-        <div
-          v-animate.70="{ above: true }"
-          class="pa-3 text-xs-center speed-3 a-from-bottom lower"
-        >
-          <h1 class="display-3 font-weight-bold">2</h1>
-          <p class="body-1 text-uppercase">Schools</p>
-        </div>
-
       </v-layout>
       
     </v-container>
@@ -166,12 +199,14 @@
 import { bgPath } from '@/utils/path'
 import ImgHexa from './components/ImgHexa'
 import BgPoly from '@/components/utils/BgPoly'
+import AppLogo from '@/components/core/AppLogo'
 
 export default {
   name: 'achievements',
   components: {
     BgPoly,
-    ImgHexa
+    ImgHexa,
+    AppLogo
   },
 
   computed: {
@@ -182,7 +217,7 @@ export default {
     },
 
     bigFont() {
-      return 'font-size: 106px !important; font-weight: bolder'
+      return 'font-size: 124px !important; font-weight: bolder'
     }
   }
 }

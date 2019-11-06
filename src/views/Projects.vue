@@ -6,10 +6,11 @@
       <section-layout
         class="pb-4"
         :title="dir"
+        title-class="text-xs-center"
         :hr-line-props="{ right: true, width: '65vw' }"
       >
 
-        <v-layout
+        <!-- <v-layout
           slot="subtitle"
           justify-center
         >
@@ -19,7 +20,7 @@
           >
             Projects
           </div>
-        </v-layout>
+        </v-layout> -->
 
         <v-container
           grid-list-lg

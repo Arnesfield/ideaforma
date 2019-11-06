@@ -4,15 +4,16 @@
     v-bind="cardProps"
     class="smooth-corners"
     style="overflow: hidden"
-    :style="!emphasize ? null : {
-      'background-color': `${color}14`
-    }"
   >
+    <!-- :style="!emphasize ? null : {
+      'background-color': `${color}14`
+    }" -->
     <v-card-title
       primary
       class="title justify-center"
     >
       <v-img
+        :style="imgStyle"
         :src="`${teamPath}${src}`"
         class="speed-3 a-from-bottom"
         v-animate.40="{ above: true }"
@@ -42,8 +43,9 @@
       />
 
       <div
-        class="body-2 pt-3"
+        v-if="description"
         v-text="description"
+        class="text-xs-justify body-2 pt-3"
       />
     </v-card-text>
   </v-card>
@@ -67,7 +69,8 @@ export default {
     },
     description: {
       type: String,
-      required: true
+      default: null,
+      required: false
     },
     src: {
       type: String,
@@ -76,6 +79,11 @@ export default {
     emphasize: {
       type: Boolean,
       default: false,
+      required: false
+    },
+    imgStyle: {
+      type: [String, Object],
+      default: null,
       required: false
     }
   },

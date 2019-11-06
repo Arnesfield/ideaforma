@@ -18,7 +18,7 @@
         <p
           v-text="text"
           v-bind="textProps"
-          class="body-1 text-uppercase"
+          class="body-1 text-uppercase text-xs-center"
         />
       
       </v-layout>

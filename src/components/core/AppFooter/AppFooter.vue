@@ -48,8 +48,8 @@
         v-animate="animate"
         class="pt-4 white--text speed-2 a-from-bottom higher"
       >
-        <div class="headline pb-2">Contact Us</div>
-        <div
+        <div class="headline pb-2 text-uppercase">Contact Us</div>
+        <!-- <div
           col
           wrap
           class="body-2 grey--text mb-2"
@@ -59,7 +59,7 @@
             Donec et mauris pretium, rutrum urna eu, sollicitudin velit.
             Praesent vitae nulla venenatis, interdum metus nec, placerat magna.
           </p>
-        </div>
+        </div> -->
 
         <v-layout
           wrap
@@ -101,6 +101,9 @@
         </v-layout>
       </v-flex>
 
+      <!-- spacer -->
+      <v-flex hidden-xs-only sm1 md1/>
+
       <!-- Careers -->
       <v-flex
         xs12
@@ -109,7 +112,7 @@
         v-animate="animate"
         class="pt-4 white--text speed-3 a-from-bottom higher"
       >
-        <div class="headline pb-2">Careers</div>
+        <div class="headline pb-2 text-uppercase">Careers</div>
         <div>
           <ul
             row

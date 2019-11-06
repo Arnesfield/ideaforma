@@ -49,13 +49,7 @@
             sm8
             md6
           >
-            <v-img
-              contain
-              aspect-ratio="3.0"
-              v-animate="{ above: true }"
-              class="speed-5 a-from-bottom"
-              :src="`${logoPath}/logo-full-transparent.png`"
-            />
+            <app-logo aspect-ratio="3.0"/>
           </v-flex>
 
           <v-flex
@@ -63,19 +57,20 @@
             sm9
             md9
             v-animate="{ above: true }"
-            class="speed-4 a-from-bottom lower"
+            class="speed-4 a-from-bottom lower double-border"
             :style="{ 'background-color': colorOpac }"
           >
+            <!-- style="border-collapse: separate; border-spacing: 32px 16px" -->
+          <!-- 'border': `4px solid white`, //${colorOpac} -->
             <v-container
               class="white--text py-5 ma-0"
             >
               <v-layout
                 align-center
-                justify-center
               >
                 <div>
                   <v-layout justify-end>
-                    <h1 class="display-2">Creating homes in the Philippines</h1>
+                    <h1 class="display-2 text-uppercase">Creating homes in the Philippines</h1>
                   </v-layout>
                 </div>
               </v-layout>
@@ -93,11 +88,13 @@
 import { colors } from '@/utils'
 import { bgPath, logoPath } from '@/utils/path'
 import BgPoly from '@/components/utils/BgPoly'
+import AppLogo from '@/components/core/AppLogo'
 
 export default {
   name: 'header-page',
   components: {
-    BgPoly
+    BgPoly,
+    AppLogo
   },
 
   data: () => ({

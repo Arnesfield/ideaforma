@@ -4,9 +4,10 @@
       class="pb-5"
       title="Our Core"
       :hr-line-props="{ width: '58vw' }"
+      :container-props="{ fluid: true }"
     >
-
       <v-container
+        fluid
         grid-list-lg
         class="speed-3 a-from-bottom"
         v-animate.60="{ above: true }"
@@ -21,15 +22,21 @@
         >
           <v-flex
             xs12
-            sm4
-            md4
+            :sm2="!isCenter(j)"
+            :md2="!isCenter(j)"
+            :sm3="isCenter(j)"
+            :md3="isCenter(j)"
             :key="`${i}-${j}`"
             v-bind="layout.flexProps"
             class="pt-4 white--text"
             v-for="(user, j) in layout.team"
+            :data-test="isCenter(j)"
           >
             <!-- :class="{ 'mt-5': !small && (j == 0 || j == team.length - 1) }" -->
-            <team-user-info v-bind="user"/>
+            <team-user-info
+              v-bind="user"
+              img-style="filter: grayscale(1)"
+            />
           </v-flex>
         </v-layout>
 
@@ -83,12 +90,19 @@ export default {
     layouts() {
       return [
         {
-          team: this.team.slice(0, 2)
+          team: this.team
         },
-        {
-          team: this.team.slice(2)
-        }
+        // {
+        //   team: this.team.slice(2)
+        // }
       ]
+    }
+  },
+
+  methods: {
+    isCenter(i) {
+      const n = this.team.length
+      return i == Math.ceil(n / 2) - 1
     }
   }
 }

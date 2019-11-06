@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="active"
     style="bottom: 0"
     class="absolute speed-5 a-from-bottom lower"
     v-animate="{ above: true, offset: 40 }"
@@ -19,6 +20,11 @@ import { bgPath } from '@/utils/path'
 export default {
   name: 'bg-poly',
   props: {
+    active: {
+      type: Boolean,
+      default: false,
+      required: false
+    },
     xsWidth: {
       type: String,
       required: false,

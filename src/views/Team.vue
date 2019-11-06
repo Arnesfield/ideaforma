@@ -6,6 +6,7 @@
       <section-layout
         class="pb-3"
         title="Meet the Team"
+        title-class="text-xs-center"
         :hr-line-props="{ width: '62vw' }"
       >
 
@@ -19,6 +20,8 @@
             wrap
             justify-center
             class="text-md-center text-sm-center text-xs-center"
+            :key="i"
+            v-for="(layout, i) in layouts"
           >
             <v-flex
               xs12
@@ -26,9 +29,9 @@
                 'sm4 md4': user.emphasize,
                 'sm3 md3': !user.emphasize
               }"
-              :key="i"
+              :key="`${i}-${j}`"
               class="pt-4 white--text"
-              v-for="(user, i) in team"
+              v-for="(user, j) in layout.team"
             >
               <team-user-info v-bind="user"/>
             </v-flex>
@@ -78,7 +81,24 @@ export default {
       return this.$vuetify.breakpoint.xsOnly
     },
     // remove slice if they need everybody
-    team: () => team.slice(5)
+    team: () => team.slice(5),
+
+    layouts() {
+      return [
+        {
+          team: this.team.slice(0, 1)
+        },
+        {
+          team: this.team.slice(1, 2)
+        },
+        {
+          team: this.team.slice(2, 3)
+        },
+        {
+          team: this.team.slice(3, 6)
+        }
+      ]
+    }
   }
 }
 </script>
