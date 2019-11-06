@@ -26,7 +26,7 @@
           :md3="isCenter(j)" -->
           <v-flex
             xs12
-            sm2
+            sm4
             md2
             :key="`${i}-${j}`"
             v-bind="layout.flexProps"
