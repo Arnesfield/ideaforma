@@ -20,12 +20,14 @@
           v-for="(layout, i) in layouts"
           class="text-md-center text-sm-center text-xs-center"
         >
+          <!-- :sm2="!isCenter(j)"
+          :md2="!isCenter(j)"
+          :sm3="isCenter(j)"
+          :md3="isCenter(j)" -->
           <v-flex
             xs12
-            :sm2="!isCenter(j)"
-            :md2="!isCenter(j)"
-            :sm3="isCenter(j)"
-            :md3="isCenter(j)"
+            sm2
+            md2
             :key="`${i}-${j}`"
             v-bind="layout.flexProps"
             class="pt-4 white--text"
