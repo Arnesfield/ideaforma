@@ -39,16 +39,21 @@
         align-center
         justify-center
       >
-        <div 
-          v-animate.120="{ above: true }"
-          class="pa-3 text-xs-center speed-5 a-from-bottom lower"
-        >
-          <h1
-            :style="bigFont"
-            class="display-3 font-weight-bold"
-          >11</h1>
-          <p class="body-1 text-uppercase">Years in Business</p>
-          <!-- Terabytes of Data -->
+        <div style="width: 224px">
+          <img-hexa
+            title="11"
+            text="Years in Business"
+            :src="`${bgPath}bg-business-years.png`"
+            v-animate.120="{ above: true }"
+            class="pt-4 speed-3 a-from-bottom"
+            :title-props="{
+              class: 'white--text',
+              style: `${bigFont}; ${shadowFont}; margin-top: -64px;`
+            }"
+            :text-props="{
+              class: 'white px-2 py-1'
+            }"
+          />
         </div>
 
         <!-- style="border: 1.5px solid #ccc !important" -->
@@ -69,7 +74,7 @@
             title="313"
             class="mx-auto pt-4"
             text="Skilled Workers Employed"
-            :src="`${bgPath}bg-years-in-business.png`"
+            :src="`${bgPath}bg-workers.png`"
             :text-props="{
               class: 'white px-2 py-1'
             }"
@@ -88,11 +93,22 @@
         </div>
 
         <div
+          style="width: 164px"
           v-animate.40="{ above: true }"
-          class="pa-3 text-xs-center speed-3 a-from-bottom lower"
+          class="speed-5 a-from-bottom lower"
         >
-          <h1 class="display-3 font-weight-bold">2</h1>
-          <p class="body-1 text-uppercase">Schools</p>
+          <img-hexa
+            title="2"
+            text="Schools"
+            :src="`${bgPath}bg-schools.png`"
+            :text-props="{
+              class: 'white px-2 py-1'
+            }"
+            :title-props="{
+              class: 'white--text',
+              style: `${shadowFont}; margin-top: -16px`
+            }"
+          />
         </div>
 
         <!-- style="border: 1.5px solid #ccc !important" -->
@@ -115,6 +131,21 @@
         justify-center
         class="pb-4"
       >
+        <div
+          style="width: 204px"
+          v-animate.60="{ above: true }"
+          class="speed-5 a-from-bottom lower"
+        >
+          <img-hexa
+            title="34"
+            text="Commercial Spaces"
+            :src="`${bgPath}bg-commercial-spaces.png`"
+            :text-props="{
+              class: 'white px-2 py-1'
+            }"
+          />
+        </div>
+
         <!-- :style="!small ? 'transform: translateY(-40px)' : null" -->
         <div style="width: 224px">
           <img-hexa
@@ -125,7 +156,7 @@
             class="pt-4 speed-3 a-from-bottom"
             :title-props="{
               class: 'white--text',
-              style: `${bigFont}; margin-top: -32px; text-shadow: 3px 4px #000000`
+              style: `${bigFont}; ${shadowFont}; margin-top: -32px;`
             }"
             :text-props="{
               class: 'white px-2 py-1'
@@ -134,7 +165,7 @@
         </div>
 
         <div
-          v-animate.110="{ above: true }"
+          v-animate.70="{ above: true }"
           class="pa-3 text-xs-center speed-5 a-from-bottom lower"
         >
           <h1
@@ -151,41 +182,32 @@
           <img-hexa
             title="134"
             text="Condominium Units"
-            :src="`${bgPath}bg-unique-cities.png`"
+            :src="`${bgPath}bg-condominium-units.png`"
             :text-props="{
               class: 'white px-2 py-1'
             }"
             :title-props="{
               class: 'white--text',
-              style: `${bigFont}; margin-top: -32px; text-shadow: 3px 4px #000000`
+              style: `${bigFont}; ${shadowFont}`
             }"
           />
         </div>
 
         <div
-          style="width: 204px"
-          v-animate.60="{ above: true }"
-          class="speed-5 a-from-bottom lower"
-        >
-          <img-hexa
-            title="34"
-            text="Commercial Spaces"
-            :src="`${bgPath}bg-unique-cities-old.png`"
-            :text-props="{
-              class: 'white px-2 py-1'
-            }"
-          />
-        </div>
-
-        <div
-          style="width: 208px;"
+          style="width: 208px"
           v-animate.90="{ above: true }"
-          class="speed-3 a-from-bottom"
+          class="speed-5 a-from-bottom"
         >
           <img-hexa
             title="26"
             text="Retail Stores"
-            :src="`${bgPath}bg-residential-houses.png`"
+            :src="`${bgPath}bg-store.png`"
+            :text-props="{
+              class: 'white px-2 py-1'
+            }"
+            :title-props="{
+              class: 'white--text'
+            }"
           />
         </div>
 
@@ -217,7 +239,11 @@ export default {
     },
 
     bigFont() {
-      return 'font-size: 124px !important; font-weight: bolder'
+      return 'font-size: 124px !important; font-weight: bolder; margin-top: -32px;'
+    },
+
+    shadowFont() {
+      return 'text-shadow: 3px 4px #000000'
     }
   }
 }
