@@ -57,7 +57,7 @@ export default {
     },
     titleClass: {
       type: [String, Object],
-      default: null,
+      default: 'text-xs-center text-sm-left',
       required: false
     },
     containerProps: {
