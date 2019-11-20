@@ -139,8 +139,8 @@
       >
         <!-- style="border: 1.5px solid #ccc !important" -->
         <div
-          v-animate.40="{ above: true }"
-          class="pa-3 text-xs-center speed-4 a-from-bottom"
+          v-animate.70="{ above: true }"
+          class="pa-3 text-xs-center speed-4 a-from-bottom lower"
         >
           <h1 class="display-3 font-weight-bold">14,004</h1>
           <p class="body-1 text-uppercase">SQM Turned Over</p>
@@ -157,7 +157,7 @@
 
         <div
           style="width: 208px"
-          v-animate.180="{ above: true }"
+          v-animate.100="{ above: true }"
           class="speed-5 a-from-bottom lower"
         >
           <img-hexa
