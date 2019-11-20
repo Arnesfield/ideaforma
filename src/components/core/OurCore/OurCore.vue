@@ -35,10 +35,7 @@
             :data-test="isCenter(j)"
           >
             <!-- :class="{ 'mt-5': !small && (j == 0 || j == team.length - 1) }" -->
-            <team-user-info
-              v-bind="user"
-              img-style="filter: grayscale(1)"
-            />
+            <team-user-info v-bind="user"/>
           </v-flex>
         </v-layout>
 

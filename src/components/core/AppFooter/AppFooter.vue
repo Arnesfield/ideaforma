@@ -71,7 +71,7 @@
               color="white"
             >fas fa-home</v-icon>
           </div>
-          <div>Unit 235 Cityflex Towers, Tower 1, 7th Avenue corner Lane T,<br/>Bonifacio Global City, Taguig City</div>
+          <div>Unit 235 Cityflex Towers, SOHO Tower,<br/>7th Avenue corner Lane T,<br/>Bonifacio Global City, Taguig City</div>
         </v-layout>
 
         <v-layout
@@ -97,7 +97,7 @@
               color="white"
             >fas fa-mobile-alt</v-icon>
           </div>
-          <div>9466011 / 0917 170 6563</div>
+          <div>79466011 / 0917 170 6563</div>
         </v-layout>
       </v-flex>
 
@@ -123,7 +123,7 @@
             <li>Interior Designer</li>
             <li>Marketing</li>
             <li>Project Manager</li>
-            <li>Accounting Admin</li>
+            <li>Accounting Staff</li>
           </ul>
         </div>
         <div

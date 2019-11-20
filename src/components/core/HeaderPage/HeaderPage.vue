@@ -70,7 +70,13 @@
               >
                 <div>
                   <v-layout justify-end>
-                    <h1 class="display-2 text-uppercase">Creating homes in the Philippines</h1>
+                    <h1
+                      class="text-uppercase text-xs-center text-sm-left"
+                      :class="{
+                        'display-1': $vuetify.breakpoint.xsOnly,
+                        'display-2': !$vuetify.breakpoint.xsOnly,
+                      }"
+                    >Creating homes in the Philippines</h1>
                   </v-layout>
                 </div>
               </v-layout>

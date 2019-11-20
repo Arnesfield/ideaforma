@@ -8,32 +8,50 @@
         title="Meet the Team"
         title-class="text-xs-center"
         :hr-line-props="{ width: '62vw' }"
+        :container-props="{ fluid: true }"
       >
 
         <v-container
+          fluid
           grid-list-lg
           class="speed-3 a-from-bottom"
           v-animate.60="{ above: true }"
         >
-          <v-layout
-            row
-            wrap
-            justify-center
-            class="text-md-center text-sm-center text-xs-center"
+          <!--
             :key="i"
-            v-for="(layout, i) in layouts"
-          >
-            <v-flex
-              xs12
-              v-bind="{
-                'sm4 md4': user.emphasize,
-                'sm3 md3': !user.emphasize
-              }"
-              :key="`${i}-${j}`"
-              class="pt-4 white--text"
-              v-for="(user, j) in layout.team"
-            >
-              <team-user-info v-bind="user"/>
+            v-for="(layout, i) in layouts" -->
+          <v-layout v-bind="layoutProps">
+            <v-flex v-bind="flexProps()"/>
+
+            <v-flex v-bind="flexProps(team[2])">
+              <team-user-info v-bind="team[2]"/>
+            </v-flex>
+
+            <v-flex v-bind="flexProps()"/>
+            <v-flex v-bind="flexProps()"/>
+
+            <v-flex v-bind="flexProps(team[0])">
+              <team-user-info v-bind="team[0]"/>
+            </v-flex>
+          </v-layout>
+
+          <v-layout v-bind="layoutProps">
+            <v-flex v-bind="flexProps(team[3])">
+              <team-user-info v-bind="team[3]"/>
+            </v-flex>
+
+            <v-flex v-bind="flexProps(team[4])">
+              <team-user-info v-bind="team[4]"/>
+            </v-flex>
+
+            <v-flex v-bind="flexProps(team[5])">
+              <team-user-info v-bind="team[5]"/>
+            </v-flex>
+
+            <v-flex v-bind="flexProps()"/>
+
+            <v-flex v-bind="flexProps(team[1])">
+              <team-user-info v-bind="team[1]"/>
             </v-flex>
           </v-layout>
         </v-container>
@@ -83,6 +101,7 @@ export default {
     // remove slice if they need everybody
     team: () => team.slice(5),
 
+    // TODO: remove
     layouts() {
       return [
         {
@@ -98,6 +117,27 @@ export default {
           team: this.team.slice(3, 6)
         }
       ]
+    },
+
+    layoutProps: () => ({
+      row: true,
+      wrap: true,
+      'justify-center': true,
+      class: 'text-md-center text-sm-center text-xs-center'
+    })
+  },
+
+  methods: {
+    flexProps(user) {
+      const em = user ? !!user.emphasize : false
+      const addClass = user ? '' : 'hidden-xs-only'
+
+      return {
+        xs12: true,
+        class: `pt-4 white--text ${addClass}`,
+        'sm4 md4': em,
+        'sm2 md2': !em
+      }
     }
   }
 }

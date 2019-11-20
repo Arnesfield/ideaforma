@@ -16,7 +16,8 @@
         :style="imgStyle"
         :src="`${teamPath}${src}`"
         class="speed-3 a-from-bottom"
-        v-animate.40="{ above: true }"
+        v-animate.30="{ above: true }"
+        style="filter: grayscale(1)"
       />
     </v-card-title>
 
@@ -25,7 +26,7 @@
       class="pt-3 speed-3 a-from-bottom"
     >
       <div
-        v-text="name"
+        v-html="name"
         class="text-uppercase primary--text"
         :class="{
           title: !emphasize,
@@ -44,7 +45,7 @@
 
       <div
         v-if="description"
-        v-text="description"
+        v-html="description"
         class="text-xs-justify body-2 pt-3"
       />
     </v-card-text>

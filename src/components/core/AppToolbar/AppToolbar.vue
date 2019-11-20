@@ -13,7 +13,10 @@
     </v-btn>
 
     <v-toolbar-title>
-      <div style="width: 140px">
+      <div
+        @click="$router.push(to || '/')"
+        style="width: 140px; cursor: pointer"
+      >
         <app-logo no-animate/>
       </div>
     </v-toolbar-title>

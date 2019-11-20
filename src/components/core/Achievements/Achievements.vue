@@ -10,12 +10,12 @@
         class="pb-4"
         align-center
       >
-        <v-flex xs5 sm3 style="transform: translateY(18px)">
+        <!-- <v-flex xs5 sm3 style="transform: translateY(18px)">
           <app-logo/>
-        </v-flex>
+        </v-flex> -->
 
         <h1
-          v-text="'in Numbers'"
+          v-text="'Our Numbers'"
           v-animate="{ above: true }"
           class="mt-5 primary--text speed-2 a-from-bottom text-uppercase"
           :class="{
@@ -41,7 +41,7 @@
       >
         <div style="width: 224px">
           <img-hexa
-            title="11"
+            title="13"
             text="Years in Business"
             :src="`${bgPath}bg-business-years.png`"
             v-animate.120="{ above: true }"
@@ -62,7 +62,7 @@
           class="pa-3 text-xs-center speed-4 a-from-bottom"
         >
           <h1 class="display-3 font-weight-bold">14,004</h1>
-          <p class="body-1 text-uppercase">SQMs Turned Over</p>
+          <p class="body-1 text-uppercase">SQM Turned Over</p>
         </div>
 
         <div

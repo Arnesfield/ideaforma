@@ -1,3 +1,5 @@
+import { i } from '@/utils/desc'
+
 export default [
   {
     number: 1,
@@ -11,7 +13,7 @@ export default [
   {
     number: 2,
     title: 'Envision',
-    text: "We'll invite you IdeaForma's creative playground where we'll play with colors and toss around ideas until a design vision is created. This part of the process gives you a sneak peek of the end in mind. It's a presentation of the big picture yet full of all those little details, all about your future home.",
+    text: `We'll invite you ${i("IdeaForma's")} creative playground where we'll play with colors and toss around ideas until a design vision is created. This part of the process gives you a sneak peek of the end in mind. It's a presentation of the big picture yet full of all those little details, all about your future home.`,
     // props
     titlePos: 'right',
     titleClass: 'text-xs-center text-sm-left text-md-right',
@@ -20,7 +22,7 @@ export default [
   {
     number: 3,
     title: 'Collaborate',
-    text: "We're all about working hand in hand with our clients in coming up with collaborative ideas and finding design solutions together —  from big decisions in furniture space planning to the littlest of details like organizing your closet shelves & drawers. Its putting together your needs & wants with our ideas & expertise in the most collaborative experience.",
+    text: "We're all about working hand in hand with our clients in coming up with collaborative ideas and finding design solutions together —  from big decisions in furniture space planning to the littlest of details like organizing your closet shelves & drawers. It's putting together your needs & wants with our ideas & expertise in the most collaborative experience.",
     // props
     titlePos: 'right',
     titleClass: 'text-xs-center text-sm-left text-md-right',
@@ -29,7 +31,7 @@ export default [
   {
     number: 4,
     title: 'Aim',
-    text: 'Considering both budget and timeline, we set clear cut goals. We pride ourselves with the most efficient monitoring and project management experience in interior design & construction making the experience as delightful as possible.',
+    text: 'Considering both budget and timeline, we set clear-cut goals. We pride ourselves with the most efficient monitoring and project management experience in interior design & construction making the experience as delightful as possible.',
     // props
     titlePos: 'left',
     titleClass: 'text-xs-center text-sm-left text-md-left',
