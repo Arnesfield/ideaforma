@@ -5,7 +5,7 @@
 
       <section-layout
         class="pb-4"
-        :title="dir"
+        :title="project.description"
         title-class="text-xs-center"
         :hr-line-props="{ right: true, width: '65vw' }"
       >
@@ -49,7 +49,7 @@
                 class="pt-4"
               >
                 <v-img
-                  :src="`${galleryPath}${dir}/${+p + getTotalBefore(i)}.png`"
+                  :src="`${galleryPath}${project.dir}/${+p + getTotalBefore(i)}.png`"
                 />
               </v-card>
             </v-flex>
@@ -94,7 +94,7 @@ export default {
   },
 
   props: {
-    dir: {
+    projectNumber: {
       type: String,
       required: true
     }
@@ -107,7 +107,8 @@ export default {
       return this.$vuetify.breakpoint.xsOnly
     },
     project() {
-      return featuredProjects.find(e => this.dir === e.title)
+      return featuredProjects[this.projectNumber - 1] || null
+      // return featuredProjects.find(e => this.name == e.routeMatch)
     },
 
     projectSizes() {
@@ -116,6 +117,12 @@ export default {
       const n2 = total - n1
 
       return [n1, n2]
+    }
+  },
+
+  mounted() {
+    if (!this.project) {
+      this.$router.replace('/')
     }
   },
 

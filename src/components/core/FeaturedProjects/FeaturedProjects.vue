@@ -46,11 +46,11 @@
                     flat
                     large
                     :to="item.to"
-                    class="headline"
+                    class="body-1"
                     :style="`height: 52px; background-color: ${color}`"
                   >
                     <span
-                      v-text="item.title"
+                      v-text="item.description"
                       style="letter-spacing: 0.28em"
                     />
                     <v-icon>arrow_right</v-icon>
