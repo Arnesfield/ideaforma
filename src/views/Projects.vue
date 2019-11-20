@@ -38,15 +38,18 @@
               sm6
               md6
               :key="i"
-              class="pt-4 white--text"
-              v-for="(p, i) in project.noOfPics"
+              class="white--text"
+              v-for="(col, i) in projectSizes"
             >
               <v-card
                 flat
                 outline
+                :key="`${i}-${j}`"
+                v-for="(p, j) in col"
+                class="pt-4"
               >
                 <v-img
-                  :src="`${galleryPath}${dir}/${+p}.png`"
+                  :src="`${galleryPath}${dir}/${+p + getTotalBefore(i)}.png`"
                 />
               </v-card>
             </v-flex>
@@ -105,7 +108,22 @@ export default {
     },
     project() {
       return featuredProjects.find(e => this.dir === e.title)
-    } 
+    },
+
+    projectSizes() {
+      const total = this.project.noOfPics
+      const n1 = Math.ceil(total / 2)
+      const n2 = total - n1
+
+      return [n1, n2]
+    }
+  },
+
+  methods: {
+    getTotalBefore(i) {
+      return this.projectSizes.slice(0, i).reduce((total, size) => size + total, 0)
+      // (i - 1 >= 0 ? projectSizes[i - 1] : 0)
+    }
   }
 }
 </script>
