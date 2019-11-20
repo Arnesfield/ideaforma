@@ -32,6 +32,7 @@
             >
               <v-img
                 contain
+                class="x-full"
                 style="height: inherit;"
                 :src="`${galleryPath}/${item.imgSrc}`"
               >
@@ -39,22 +40,44 @@
                   align-end
                   justify-center
                   fill-height
-                  class="pr-3"
+                  class="pr-3 pb-2"
                 >
-                  <v-btn
-                    dark
-                    flat
-                    large
-                    :to="item.to"
-                    class="body-1"
-                    :style="`height: 52px; background-color: ${color}`"
+                  <v-layout
+                    row
+                    wrap
+                    justify-center
                   >
-                    <span
-                      v-text="item.description"
-                      style="letter-spacing: 0.28em"
-                    />
-                    <v-icon>arrow_right</v-icon>
-                  </v-btn>
+                    <v-flex xs12>
+                      <v-layout justify-center>
+                        <v-btn
+                          dark
+                          flat
+                          large
+                          :to="item.to"
+                          class="subheading elevation-1"
+                          :style="`height: 52px; background-color: ${color}`"
+                        >
+                          <span
+                            v-text="'View project'"
+                          />
+                          <!-- style="letter-spacing: 0.28em" -->
+                          <v-icon>arrow_right</v-icon>
+                        </v-btn>
+                      </v-layout>
+                    </v-flex>
+
+                    <v-flex xs12>
+                      <v-layout justify-center>
+                        <div
+                          v-text="item.description"
+                          style="background-color: #ffffffee"
+                          class="px-2 py-1 elevation-1 text-xs-center"
+                        />
+                      </v-layout>
+                    </v-flex>
+
+                  </v-layout>
+
                 </v-layout>
               </v-img>
 
