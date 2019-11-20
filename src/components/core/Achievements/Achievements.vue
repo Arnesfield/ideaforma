@@ -56,42 +56,6 @@
           />
         </div>
 
-        <!-- style="border: 1.5px solid #ccc !important" -->
-        <div
-          v-animate.40="{ above: true }"
-          class="pa-3 text-xs-center speed-4 a-from-bottom"
-        >
-          <h1 class="display-3 font-weight-bold">14,004</h1>
-          <p class="body-1 text-uppercase">SQM Turned Over</p>
-        </div>
-
-        <div
-          style="width: 208px"
-          v-animate.180="{ above: true }"
-          class="speed-5 a-from-bottom lower"
-        >
-          <img-hexa
-            title="313"
-            class="mx-auto pt-4"
-            text="Skilled Workers Employed"
-            :src="`${bgPath}bg-workers.png`"
-            :text-props="{
-              class: 'white px-2 py-1'
-            }"
-            :title-props="{
-              style: 'margin-top: -32px'
-            }"
-          />
-        </div>
-
-        <div
-          v-animate.40="{ above: true }"
-          class="pa-3 text-xs-center speed-3 a-from-bottom lower"
-        >
-          <h1 class="display-3 font-weight-bold">13</h1>
-          <p class="body-1 text-uppercase">Restaurants</p>
-        </div>
-
         <div
           style="width: 164px"
           v-animate.40="{ above: true }"
@@ -107,41 +71,6 @@
             :title-props="{
               class: 'white--text',
               style: `${shadowFont}; margin-top: -16px`
-            }"
-          />
-        </div>
-
-        <!-- style="border: 1.5px solid #ccc !important" -->
-        <div
-          v-animate.40="{ above: true }"
-          class="pa-3 text-xs-center speed-4 a-from-bottom"
-        >
-          <h1 class="display-3 font-weight-bold">414,000</h1>
-          <p class="body-1 text-uppercase">Color Palettes Chosen</p>
-        </div>
-
-      </v-layout>
-
-      <!-- Second Row -->
-
-      <v-layout
-        row
-        ma-0
-        wrap
-        justify-center
-        class="pb-4"
-      >
-        <div
-          style="width: 204px"
-          v-animate.60="{ above: true }"
-          class="speed-5 a-from-bottom lower"
-        >
-          <img-hexa
-            title="34"
-            text="Commercial Spaces"
-            :src="`${bgPath}bg-commercial-spaces.png`"
-            :text-props="{
-              class: 'white px-2 py-1'
             }"
           />
         </div>
@@ -165,6 +94,29 @@
         </div>
 
         <div
+          style="width: 204px"
+          v-animate.60="{ above: true }"
+          class="speed-5 a-from-bottom lower"
+        >
+          <img-hexa
+            title="34"
+            text="Commercial Spaces"
+            :src="`${bgPath}bg-commercial-spaces.png`"
+            :text-props="{
+              class: 'white px-2 py-1'
+            }"
+          />
+        </div>
+
+        <div
+          v-animate.40="{ above: true }"
+          class="pa-3 text-xs-center speed-3 a-from-bottom lower"
+        >
+          <h1 class="display-3 font-weight-bold">13</h1>
+          <p class="body-1 text-uppercase">Restaurants</p>
+        </div>
+
+        <div
           v-animate.70="{ above: true }"
           class="pa-3 text-xs-center speed-5 a-from-bottom lower"
         >
@@ -172,6 +124,54 @@
             class="display-3 font-weight-bold"
           >25</h1>
           <p class="body-1 text-uppercase">Office Spaces</p>
+        </div>
+
+      </v-layout>
+
+      <!-- Second Row -->
+
+      <v-layout
+        row
+        ma-0
+        wrap
+        justify-center
+        class="pb-4"
+      >
+        <!-- style="border: 1.5px solid #ccc !important" -->
+        <div
+          v-animate.40="{ above: true }"
+          class="pa-3 text-xs-center speed-4 a-from-bottom"
+        >
+          <h1 class="display-3 font-weight-bold">14,004</h1>
+          <p class="body-1 text-uppercase">SQM Turned Over</p>
+        </div>
+
+        <!-- style="border: 1.5px solid #ccc !important" -->
+        <div
+          v-animate.40="{ above: true }"
+          class="pa-3 text-xs-center speed-4 a-from-bottom"
+        >
+          <h1 class="display-3 font-weight-bold">414,000</h1>
+          <p class="body-1 text-uppercase">Color Palettes Chosen</p>
+        </div>
+
+        <div
+          style="width: 208px"
+          v-animate.180="{ above: true }"
+          class="speed-5 a-from-bottom lower"
+        >
+          <img-hexa
+            title="313"
+            class="mx-auto pt-4"
+            text="Skilled Workers Employed"
+            :src="`${bgPath}bg-workers.png`"
+            :text-props="{
+              class: 'white px-2 py-1'
+            }"
+            :title-props="{
+              style: 'margin-top: -32px'
+            }"
+          />
         </div>
 
         <div
