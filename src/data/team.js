@@ -27,6 +27,18 @@ export default [
     src: 'Nina Camacho.png'
   },
   {
+    name: 'Rico<br/>Gomez',
+    title: 'Asst. General Manager',
+    description: `
+      Having handled multiple projects of different styles,
+      paces & clients all through out his five years in the firm,
+      ${name('Rico')} has perfected the smoothest implementation of the unique
+      ${i('IdeaForma')} design process & over-all management.
+      With almost a hundred projects under his sleeve, his project management,
+      finance & administrative skills are truly quite remarkable.`,
+    src: 'Rico Gomez.png'
+  },
+  {
     name: 'Lisa<br/>Gomez',
     title: 'Marketing Head',
     description: `
@@ -38,18 +50,6 @@ export default [
       her with the greatest attention to detail, knowing that it's the small things
       that truly matter.`,
     src: 'Lisa Gomez.png'
-  },
-  {
-    name: 'Rico<br/>Gomez',
-    title: 'Asst. General Manager',
-    description: `
-      Having handled multiple projects of different styles,
-      paces & clients all through out his five years in the firm,
-      ${name('Rico')} has perfected the smoothest implementation of the unique
-      ${i('IdeaForma')} design process & over-all management.
-      With almost a hundred projects under his sleeve, his project management,
-      finance & administrative skills are truly quite remarkable.`,
-    src: 'Rico Gomez.png'
   },
   {
     name: 'Erica<br/>Gomez',
