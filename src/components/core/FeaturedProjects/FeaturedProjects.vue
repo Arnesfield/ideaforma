@@ -58,7 +58,7 @@
                           :style="`height: 52px; background-color: ${color}`"
                         >
                           <span
-                            v-text="'View project'"
+                            v-text="'View Photos'"
                           />
                           <!-- style="letter-spacing: 0.28em" -->
                           <v-icon>arrow_right</v-icon>
@@ -69,10 +69,12 @@
                     <v-flex xs12>
                       <v-layout justify-center>
                         <div
-                          v-text="item.description"
                           style="background-color: #ffffffee"
                           class="px-2 py-1 elevation-1 text-xs-center"
-                        />
+                        >
+                          <div v-text="`${item.description} (${item.meta.sqm} SQM)`"/>
+                          <div v-text="item.location"/>
+                        </div>
                       </v-layout>
                     </v-flex>
 

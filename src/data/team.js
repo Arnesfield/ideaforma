@@ -39,7 +39,7 @@ export default [
     src: 'Rico Gomez.png'
   },
   {
-    name: 'Lisa<br/>Gomez',
+    name: 'Lisa<br/>Gomez-Quirante',
     title: 'Marketing Head',
     description: `
       With customer experience in this highly competitive service industry
@@ -66,39 +66,39 @@ export default [
     src: 'Erica Gomez.png'
   },
   {
-    name: 'Debbie Ramos',
+    name: 'Debbie<br/>Ramos',
     title: 'Finance & Administrative Supervisor',
     // description: 'Dolor pariatur magna eu culpa quis commodo anim pariatur eu exercitation exercitation fugiat et. Exercitation qui ex ullamco in.',
     src: 'Debbie Ramos.png',
     // emphasize: true
   },
   {
-    name: 'Mike Umbao',
+    name: 'Mike<br/>Umbao',
     title: 'Administrative Staff',
     // description: 'Ipsum sunt veniam ex et nulla officia consequat mollit excepteur. Nostrud magna elit excepteur ipsum. Sit fugiat anim aliquip laboris magna officia consectetur eiusmod ex minim id.',
     src: 'Mike Umbao.png'
   },
   {
-    name: 'Rachel Tanada',
+    name: 'Rachel<br/>Tanada',
     title: 'Sr. Design Associate',
     // description: 'Est excepteur sit sunt voluptate culpa aute magna veniam culpa consectetur. Eiusmod elit irure adipisicing dolor id deserunt commodo enim quis reprehenderit non sunt laborum.',
     src: 'Rachel Tanada.png',
     // emphasize: true
   },
   {
-    name: 'Angelica Jaurigue',
+    name: 'Angelica<br/>Jaurigue',
     title: 'Jr. Interior Designer',
     // description: 'Qui sit velit fugiat voluptate reprehenderit nostrud laborum enim sint ipsum cupidatat. Enim dolor mollit nisi aliqua.',
     src: 'Angelica Jaurigue.png'
   },
   {
-    name: 'Reneca Abuso',
+    name: 'Reneca<br/>Abuso',
     title: 'Jr. Interior Designer',
     // description: 'Aliquip qui officia excepteur est minim aute magna ut anim ex anim non. Tempor velit do consequat Lorem irure minim consectetur exercitation tempor consequat ut sunt Lorem ex.',
     src: 'Reneca Abuso.png'
   },
   {
-    name: 'Ally Asprec',
+    name: 'Ally<br/>Asprec',
     title: 'Technical Designer',
     // description: 'Laboris dolore laborum incididunt aliqua amet velit non esse cillum. Aliqua veniam est culpa pariatur proident consequat ullamco tempor ut labore voluptate.',
     src: 'Ally Asprec.png'

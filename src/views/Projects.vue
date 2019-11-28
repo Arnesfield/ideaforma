@@ -10,17 +10,18 @@
         :hr-line-props="{ right: true, width: '65vw' }"
       >
 
-        <!-- <v-layout
+        <v-layout
           slot="subtitle"
           justify-center
         >
           <div
             v-animate="{ above: true }"
-            class="mb-3 text-xs-center speed-2 a-from-bottom"
+            class="mb-3 text-xs-center speed-2 a-from-bottom subheading"
           >
-            Projects
+            <div v-text="`${project.meta.sqm} SQM`"/>
+            <div v-text="project.location"/>
           </div>
-        </v-layout> -->
+        </v-layout>
 
         <v-container
           grid-list-lg

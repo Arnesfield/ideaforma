@@ -23,11 +23,11 @@
 
     <v-card-text
       v-animate="{ above: true }"
-      class="pt-3 speed-3 a-from-bottom"
+      class="px-0 pt-2 speed-3 a-from-bottom"
     >
       <div
         v-html="name"
-        class="text-uppercase primary--text"
+        class="text-uppercase primary--text mb-2"
         :class="{
           title: !emphasize,
           'font-weight-bold display-1': emphasize
@@ -36,18 +36,19 @@
       <!-- :style="!emphasize ? null : {
           'font-size': '28px !important'
         }" -->
+      <div class="px-3">
+        <div
+          v-if="title"
+          v-text="title"
+          class="mt-1 body-1 grey--text text--darken-1"
+        />
 
-      <div
-        v-if="title"
-        v-text="title"
-        class="mt-1 body-1 grey--text text--darken-1"
-      />
-
-      <div
-        v-if="description"
-        v-html="description"
-        class="text-xs-justify body-2 pt-3"
-      />
+        <div
+          v-if="description"
+          v-html="description"
+          class="text-xs-justify body-2 pt-3"
+        />
+      </div>
     </v-card-text>
   </v-card>
 </template>

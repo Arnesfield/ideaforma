@@ -41,7 +41,7 @@
       >
         <div style="width: 224px">
           <img-hexa
-            title="13"
+            title="12"
             text="Years in Business"
             :src="`${bgPath}bg-business-years.png`"
             v-animate.120="{ above: true }"

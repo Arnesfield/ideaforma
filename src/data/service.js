@@ -15,7 +15,12 @@ export default [
   },
   {
     name: 'Home Management',
-    desc: 'Coming Soon!',
+    desc: `Whether you've just moved into your first house, or you've been staying in
+      it for the longest time, we know you're always itching
+      to improve your home sweet home!
+      We specialize in carpentry, painting, plumbing, electrical
+      and mechanical works and all other
+      minor and major home improvement & maintenance concerns.`,
     src: 'icon-property.png'
   }
 ]
