@@ -197,6 +197,9 @@
             title="14,004"
             text="SQM Turned Over"
             :src="`${bgPath}bg-hexagon-white-bordered.png`"
+            :title-props="{
+              class: 'display-2'
+            }"
           />
         </div>
 
@@ -228,7 +231,7 @@
         </div> -->
 
         <div
-          style="width: 224px"
+          style="width: 232px"
           v-animate.70="{ above: true }"
           class="speed-5 a-from-bottom"
         >
@@ -240,7 +243,7 @@
               class: 'white--text'
             }"
             :title-props="{
-              class: 'white--text',
+              class: 'white--text display-2',
               style: shadowFont
             }"
           />
