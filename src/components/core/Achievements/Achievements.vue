@@ -108,15 +108,34 @@
           />
         </div>
 
-        <div
+        <!-- <div
           v-animate.40="{ above: true }"
           class="pa-3 text-xs-center speed-3 a-from-bottom lower"
         >
           <h1 class="display-3 font-weight-bold">13</h1>
           <p class="body-1 text-uppercase">Restaurants</p>
-        </div>
+        </div> -->
 
         <div
+          style="width: 144px"
+          v-animate.40="{ above: true }"
+          class="speed-5 a-from-bottom"
+        >
+          <img-hexa
+            title="13"
+            text="Restaurants"
+            :src="`${bgPath}bg-hexagon-black-bordered.png`"
+            :text-props="{
+              class: 'white--text'
+            }"
+            :title-props="{
+              class: 'white--text',
+              style: 'margin-top: -16px'
+            }"
+          />
+        </div>
+
+        <!-- <div
           v-animate.70="{ above: true }"
           class="pa-3 text-xs-center speed-5 a-from-bottom lower"
         >
@@ -124,6 +143,25 @@
             class="display-3 font-weight-bold"
           >25</h1>
           <p class="body-1 text-uppercase">Office Spaces</p>
+        </div> -->
+
+        <div
+          style="width: 144px"
+          v-animate.70="{ above: true }"
+          class="speed-5 a-from-bottom"
+        >
+          <img-hexa
+            title="25"
+            text="Office Spaces"
+            :src="`${bgPath}bg-hexagon-gray-bordered.png`"
+            :text-props="{
+              class: 'white--text'
+            }"
+            :title-props="{
+              class: 'white--text',
+              style: 'margin-top: -16px'
+            }"
+          />
         </div>
 
       </v-layout>
@@ -138,21 +176,45 @@
         class="pb-4"
       >
         <!-- style="border: 1.5px solid #ccc !important" -->
-        <div
+        <!-- <div
           v-animate.70="{ above: true }"
           class="pa-3 text-xs-center speed-4 a-from-bottom lower"
         >
           <h1 class="display-3 font-weight-bold">14,004</h1>
           <p class="body-1 text-uppercase">SQM Turned Over</p>
+        </div> -->
+
+        <div
+          style="width: 208px"
+          v-animate.70="{ above: true }"
+          class="speed-5 a-from-bottom"
+        >
+          <img-hexa
+            title="14,004"
+            text="SQM Turned Over"
+            :src="`${bgPath}bg-hexagon-white-bordered.png`"
+          />
         </div>
 
         <!-- style="border: 1.5px solid #ccc !important" -->
-        <div
+        <!-- <div
           v-animate.40="{ above: true }"
           class="pa-3 text-xs-center speed-4 a-from-bottom"
         >
           <h1 class="display-3 font-weight-bold">414,000</h1>
           <p class="body-1 text-uppercase">Color Palettes Chosen</p>
+        </div> -->
+
+        <div
+          style="width: 224px"
+          v-animate.70="{ above: true }"
+          class="speed-5 a-from-bottom"
+        >
+          <img-hexa
+            title="414,000"
+            text="Color Palettes Chosen"
+            :src="`${bgPath}bg-hexagon-primary-bordered.png`"
+          />
         </div>
 
         <div
