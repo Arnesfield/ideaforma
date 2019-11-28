@@ -56,6 +56,33 @@
           />
         </div>
 
+        <!-- <div
+          v-animate.40="{ above: true }"
+          class="pa-3 text-xs-center speed-3 a-from-bottom lower"
+        >
+          <h1 class="display-3 font-weight-bold">13</h1>
+          <p class="body-1 text-uppercase">Restaurants</p>
+        </div> -->
+
+        <div
+          style="width: 144px"
+          v-animate.40="{ above: true }"
+          class="speed-5 a-from-bottom"
+        >
+          <img-hexa
+            title="13"
+            text="Restaurants"
+            :src="`${bgPath}bg-hexagon-black-bordered.png`"
+            :text-props="{
+              class: 'white--text'
+            }"
+            :title-props="{
+              class: 'white--text',
+              style: 'margin-top: -16px'
+            }"
+          />
+        </div>
+
         <div
           style="width: 164px"
           v-animate.40="{ above: true }"
@@ -94,43 +121,20 @@
         </div>
 
         <div
-          style="width: 204px"
-          v-animate.60="{ above: true }"
+          style="width: 208px"
+          v-animate.100="{ above: true }"
           class="speed-5 a-from-bottom lower"
         >
           <img-hexa
-            title="34"
-            text="Commercial Spaces"
-            :src="`${bgPath}bg-commercial-spaces.png`"
+            title="313"
+            class="mx-auto pt-4"
+            text="Skilled Workers Employed"
+            :src="`${bgPath}bg-workers.png`"
             :text-props="{
               class: 'white px-2 py-1'
             }"
-          />
-        </div>
-
-        <!-- <div
-          v-animate.40="{ above: true }"
-          class="pa-3 text-xs-center speed-3 a-from-bottom lower"
-        >
-          <h1 class="display-3 font-weight-bold">13</h1>
-          <p class="body-1 text-uppercase">Restaurants</p>
-        </div> -->
-
-        <div
-          style="width: 144px"
-          v-animate.40="{ above: true }"
-          class="speed-5 a-from-bottom"
-        >
-          <img-hexa
-            title="13"
-            text="Restaurants"
-            :src="`${bgPath}bg-hexagon-black-bordered.png`"
-            :text-props="{
-              class: 'white--text'
-            }"
             :title-props="{
-              class: 'white--text',
-              style: 'margin-top: -16px'
+              style: 'margin-top: -32px'
             }"
           />
         </div>
@@ -196,6 +200,24 @@
           />
         </div>
 
+        <div
+          style="width: 208px"
+          v-animate.90="{ above: true }"
+          class="speed-5 a-from-bottom"
+        >
+          <img-hexa
+            title="26"
+            text="Retail Stores"
+            :src="`${bgPath}bg-store.png`"
+            :text-props="{
+              class: 'white px-2 py-1'
+            }"
+            :title-props="{
+              class: 'white--text'
+            }"
+          />
+        </div>
+
         <!-- style="border: 1.5px solid #ccc !important" -->
         <!-- <div
           v-animate.40="{ above: true }"
@@ -214,24 +236,12 @@
             title="414,000"
             text="Color Palettes Chosen"
             :src="`${bgPath}bg-hexagon-primary-bordered.png`"
-          />
-        </div>
-
-        <div
-          style="width: 208px"
-          v-animate.100="{ above: true }"
-          class="speed-5 a-from-bottom lower"
-        >
-          <img-hexa
-            title="313"
-            class="mx-auto pt-4"
-            text="Skilled Workers Employed"
-            :src="`${bgPath}bg-workers.png`"
             :text-props="{
-              class: 'white px-2 py-1'
+              class: 'white--text'
             }"
             :title-props="{
-              style: 'margin-top: -32px'
+              class: 'white--text',
+              style: shadowFont
             }"
           />
         </div>
@@ -256,19 +266,16 @@
         </div>
 
         <div
-          style="width: 208px"
-          v-animate.90="{ above: true }"
-          class="speed-5 a-from-bottom"
+          style="width: 204px"
+          v-animate.60="{ above: true }"
+          class="speed-5 a-from-bottom lower"
         >
           <img-hexa
-            title="26"
-            text="Retail Stores"
-            :src="`${bgPath}bg-store.png`"
+            title="34"
+            text="Commercial Spaces"
+            :src="`${bgPath}bg-commercial-spaces.png`"
             :text-props="{
               class: 'white px-2 py-1'
-            }"
-            :title-props="{
-              class: 'white--text'
             }"
           />
         </div>
